@@ -14,7 +14,7 @@
 }
 
 .menu__link {
-    min-width: 480px;
+    max-width: 480px;
     background-color: bisque;
     padding: 20px;
     border-radius: 10px;
@@ -31,3 +31,6 @@
     background-color: aqua;
 }
 
+.animation {
+    transition: .4s ease all;
+}

@@ -6,7 +6,7 @@
 }
 
 .menu__link {
-  min-width: 480px;
+  max-width: 480px;
   background-color: bisque;
   padding: 20px;
   border-radius: 10px;
@@ -20,4 +20,8 @@
 .menu__link:active {
   transform: translateX(2px);
   background-color: aqua;
+}
+
+.animation {
+  transition: 0.4s ease all;
 }/*# sourceMappingURL=menu.css.map */

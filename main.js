@@ -9,11 +9,13 @@ const Click = () => {
         div1.classList.add('div1')
         div2.classList.add('div2')
         div3.classList.add('div3')
+        menu__link1.classList.add('animation')
     } else {
         menu.style.display = 'none'
         div1.classList.remove('div1')
         div2.classList.remove('div2')
         div3.classList.remove('div3')
+        menu__link1.classList.add('animation')
     }
 
 }
