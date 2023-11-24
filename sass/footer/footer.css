@@ -1,0 +1,24 @@
+.footer__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer {
+  padding: 20px;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: black;
+}
+.footer .header__title {
+  color: aliceblue;
+}
+
+.footer__link {
+  gap: 20px;
+}/*# sourceMappingURL=footer.css.map */

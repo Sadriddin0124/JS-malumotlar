@@ -7,14 +7,16 @@
 
 .menu__link {
   max-width: 480px;
-  background-color: bisque;
+  width: 100%;
+  background-color: rgb(8, 55, 54);
   padding: 20px;
   border-radius: 10px;
-  color: black;
+  color: #fff;
   text-transform: uppercase;
   font-weight: 700;
   justify-content: center;
   transition: 0.5s ease all;
+  box-shadow: 10px 10px 10px rgb(8, 55, 54);
 }
 
 .menu__link:active {

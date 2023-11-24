@@ -1,17 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS darslik</title>
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./sass/styles.css">.
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
+</head>
+
 <body>
     <div class="container">
         <nav class="navbar">
             <div class="navbar__items">
-                <h1 class="nav__logo">JS</h1>
+                <div class="nav__logo">
+                    <img src="./images/nav__logo.webp" alt="">
+                </div>
                 <ul class="nav__list">
                     <a href="./html/contacts.html" class="contacts">contacts</a>
                     <a href="./html/menu.html" class="contacts">Lessons</a>
@@ -23,7 +32,7 @@
                     <div class="div  " id="div2"></div>
                     <div class="div  " id="div3"></div>
                 </a>
-                <div id="menu"  class="navbar__menu ">
+                <div id="menu" class="navbar__menu ">
                     <a href="./html/contacts.html" class="contacts">contacts</a>
                     <a href="./html/menu.html" class="contacts">Lessons</a>
                     <a class="contacts" href="/">home</a>
@@ -33,8 +42,26 @@
         </nav>
         <header id="header" class="header">
             <h1 class="header__title">JS darslari bo'yicha ma'lumotlar</h1>
+            <div class="header__card">
+                <div class="header__card-img">
+                    <img src="./images/header-img.jpg" alt="">
+                </div>
+                <p class="header__card-desc">Bu shunchaki o'tilgan darslar bo'yicha mustaqil yaratilgan project</p>
+            </div>
         </header>
+        <footer class="footer">
+            <h1 style="margin-bottom: 20px;" class="header__title">Contact Us</h1>
+            <div class="footer__link">
+                <a href="https://t.me/farkhodo_vich" class="contacts__link telegram"><i
+                        class="fa-brands fa-telegram"></i></a>
+                <a href="https://instagram.com/farkhodo_vich" class="contacts__link instagram"><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a href="https://github.com/Sadriddin0124" class="contacts__link github"><i
+                        class="fa-brands fa-github "></i></a>
+            </div>
+        </footer>
     </div>
     <script src="./main.js"></script>
 </body>
+
 </html>

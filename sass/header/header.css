@@ -5,7 +5,7 @@
   flex-wrap: wrap;
 }
 
-.header, .menu {
+.header__card, .header, .menu {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,9 +18,10 @@
   top: 0;
   width: 100%;
   height: 70px;
-  padding: 20px;
-  background: #000;
-  color: aliceblue;
+  padding: 20px 20px 30px;
+  background: #fff;
+  color: black;
+  box-shadow: 2px 2px 10px;
 }
 
 .navbar__items {
@@ -28,6 +29,14 @@
   width: 100%;
   justify-content: space-around;
   display: flex;
+}
+
+.nav__logo {
+  width: 40px;
+  height: 40px;
+}
+.nav__logo img {
+  width: 100%;
 }
 
 .nav__list {
@@ -61,10 +70,12 @@
 
 .contacts {
   position: relative;
-  color: aliceblue;
-  font-size: 15px;
-  text-transform: uppercase;
-  height: 50px;
+  top: -5px;
+  color: black;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: capitalize;
+  height: 40px;
   transition: 0.5s ease all;
 }
 
@@ -72,24 +83,39 @@
   content: "";
   position: absolute;
   top: 0;
-  left: 0;
-  height: 2px;
-  background-color: bisque;
+  right: 0;
+  height: 2.5px;
   width: 0%;
+  background-color: blue;
+  transition: 0.5s ease all;
 }
 
 .contacts::after {
   content: "";
   position: absolute;
   bottom: 0;
-  right: 0;
+  left: 0;
   height: 2px;
-  background-color: bisque;
+  width: 0;
+  background-color: blue;
   width: 0%;
+  transition: 0.5s ease all;
 }
 
-.contacts:hover {
-  color: red;
+.contacts:hover.contacts::after {
+  width: 100%;
+}
+
+.contacts:hover.contacts::before {
+  width: 100%;
+}
+
+.contacts:active.contacts::after {
+  width: 100%;
+}
+
+.contacts:active.contacts::before {
+  width: 100%;
 }
 
 .nav__logo {
@@ -136,7 +162,7 @@
   padding: 200px 20px;
   min-height: 100vh;
   width: 100%;
-  background: #05313f;
+  background: #fff;
   gap: 30px;
 }
 
@@ -145,13 +171,14 @@
 }
 
 .header__title {
-  color: aliceblue;
+  color: black;
   font-size: 40px;
   text-align: center;
 }
 
 .red {
   color: red;
+  color: #01245d;
 }
 
 .yellow {
@@ -160,4 +187,23 @@
 
 .green {
   color: aquamarine;
+}
+
+.header__card {
+  max-width: 800px;
+  gap: 30px;
+}
+
+.header__card-img {
+  width: 100%;
+}
+.header__card-img img {
+  width: 100%;
+  border: 1px solid rgba(128, 128, 128, 0.367);
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.header__card-desc {
+  font-size: 20px;
 }/*# sourceMappingURL=header.css.map */

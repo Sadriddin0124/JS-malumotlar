@@ -1,0 +1,34 @@
+%flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+%flex-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.footer {
+    padding: 20px;
+    width: 100%;
+    height: 200px;
+    // @extend %flex-column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;
+    .header__title {
+        color: aliceblue
+    }
+}
+
+.footer__link {
+    @extend %flex-center;
+    gap: 20px;
+}

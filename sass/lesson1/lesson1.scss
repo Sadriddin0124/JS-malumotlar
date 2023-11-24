@@ -13,23 +13,38 @@
     flex-wrap: wrap;
 }
 
+.lessons {
+    @extend %flex-column;
+}
 
-.header__text {
+.lessons__title {
+    font-size: 30px;
+}
+
+
+.lessons__text {
     margin: 10px;
     max-width: 500px;
     padding: 20px;
-    background-color: rgb(80, 77, 77);
+    background-color: #01435d;
     border-radius: 10px;
     @extend %flex-column;
     align-items: start;
     gap: 10px;
     margin-bottom: 50px;
     color: aliceblue;
+    box-shadow: 10px 10px 10px black;
+    transition:  .2s ease-in;
+}
+
+.lessons__text:hover {
+    transform: scale(1.04);
 }
 
 .back {
     display: block;
     position: fixed;
+    z-index: 11;
     right: 10px;
     bottom: 20px;
     color: aliceblue;
