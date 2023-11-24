@@ -9,13 +9,12 @@ const Click = () => {
         div1.classList.add('div1')
         div2.classList.add('div2')
         div3.classList.add('div3')
-        menu__link1.classList.add('animation')
+        classList.add('animation')
     } else {
         menu.style.display = 'none'
         div1.classList.remove('div1')
         div2.classList.remove('div2')
         div3.classList.remove('div3')
-        menu__link1.classList.add('animation')
     }
 
 }
@@ -103,3 +102,33 @@ show__list2.addEventListener("click", () => {
 })
 
 
+const slides = document.querySelectorAll('.slide');
+let index = 0;
+
+function prevSlide(){
+    slides[index].classList.remove('active');
+    index--;
+
+    if(index < 0)
+        index = slides.length -1;
+
+    slides[index].classList.add('active');      
+}
+
+document.querySelector('.prev').addEventListener('click', e => {
+    prevSlide();
+});
+
+function nextSlide(){
+    slides[index].classList.remove('active');
+    index++;
+
+    if(index > slides.length -1)
+        index = 0;
+
+    slides[index].classList.add('active');      
+}
+
+document.querySelector('.next').addEventListener('click', e => {
+    nextSlide();
+});

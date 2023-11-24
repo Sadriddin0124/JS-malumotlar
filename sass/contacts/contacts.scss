@@ -16,10 +16,10 @@
 .contacts__link {
     position: relative;
     @extend %flex-center;
-    font-size: 50px;
+    font-size: 30px;
     color: aliceblue;
-    height: 100px;
-    width: 100px;
+    height: 60px;
+    width: 60px;
     background: black;
     border-radius: 10px  60px 60px 60px;
     i {
