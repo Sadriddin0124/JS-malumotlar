@@ -1,0 +1,163 @@
+.contacts, .nav__list, .navbar__items, .navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.header, .menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  padding: 20px;
+  background: #000;
+  color: aliceblue;
+}
+
+.navbar__items {
+  position: relative;
+  width: 100%;
+  justify-content: space-around;
+  display: flex;
+}
+
+.nav__list {
+  gap: 70px;
+}
+
+.navbar__menu {
+  display: none;
+  position: absolute;
+  right: -20px;
+  top: 50px;
+  background: #01245d;
+  width: 200px;
+  padding: 10px;
+  color: aliceblue;
+}
+
+.navbar__menu1 {
+  display: block;
+}
+
+.remove {
+  text-align: center;
+  background-color: green;
+  border-radius: 10px;
+}
+
+.menu__link22 {
+  display: none;
+}
+
+.contacts {
+  position: relative;
+  color: aliceblue;
+  font-size: 15px;
+  text-transform: uppercase;
+  height: 50px;
+  transition: 0.5s ease all;
+}
+
+.contacts::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background-color: bisque;
+  width: 0%;
+}
+
+.contacts::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 2px;
+  background-color: bisque;
+  width: 0%;
+}
+
+.contacts:hover {
+  color: red;
+}
+
+.nav__logo {
+  color: aliceblue;
+  font-size: 30px;
+}
+
+.menu {
+  display: none;
+  position: relative;
+  gap: 6px;
+  transition: 1s ease all;
+}
+.menu .div {
+  width: 30px;
+  height: 4px;
+  background-color: aliceblue;
+  border-radius: 5px;
+  margin: 4px;
+}
+.menu .menu:hover > div {
+  background-color: red;
+}
+
+.div2 {
+  display: none;
+}
+
+.div1 {
+  transform: rotate(45deg);
+  position: absolute;
+  right: 0;
+  top: -5px;
+}
+
+.div3 {
+  transform: rotate(-45deg);
+  position: absolute;
+  right: 0;
+  top: -5px;
+}
+
+.header {
+  padding: 200px 20px;
+  min-height: 100vh;
+  width: 100%;
+  background: #05313f;
+  gap: 30px;
+}
+
+.header2 {
+  padding-right: 0;
+}
+
+.header__title {
+  color: aliceblue;
+  font-size: 40px;
+  text-align: center;
+}
+
+.red {
+  color: red;
+}
+
+.yellow {
+  color: yellow;
+}
+
+.green {
+  color: aquamarine;
+}/*# sourceMappingURL=header.css.map */
