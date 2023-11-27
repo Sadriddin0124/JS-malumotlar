@@ -3,6 +3,7 @@ let menu = document.getElementById('menu')
 let div1 = document.getElementById('div1')
 let div2 = document.getElementById('div2')
 let div3 = document.getElementById('div3')
+menu.style.display = 'none'
 const Click = () => {
     if (menu.style.display === 'none') {
         menu.style.display = 'block'
@@ -43,6 +44,7 @@ function show_video2() {
 }
 
 let show__list = document.getElementById('show__list')
+lessons.style.display = 'none'
 
 show__list.addEventListener("click", () => {
     if (lessons.style.display === 'none') {
@@ -102,33 +104,3 @@ show__list2.addEventListener("click", () => {
 })
 
 
-const slides = document.querySelectorAll('.slide');
-let index = 0;
-
-function prevSlide(){
-    slides[index].classList.remove('active');
-    index--;
-
-    if(index < 0)
-        index = slides.length -1;
-
-    slides[index].classList.add('active');      
-}
-
-document.querySelector('.prev').addEventListener('click', e => {
-    prevSlide();
-});
-
-function nextSlide(){
-    slides[index].classList.remove('active');
-    index++;
-
-    if(index > slides.length -1)
-        index = 0;
-
-    slides[index].classList.add('active');      
-}
-
-document.querySelector('.next').addEventListener('click', e => {
-    nextSlide();
-});
