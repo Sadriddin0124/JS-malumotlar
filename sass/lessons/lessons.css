@@ -1,56 +1,51 @@
-.lessons {
+.themes, .videos, .lessons__text, .lessons {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   flex-wrap: wrap;
 }
 
 .lessons {
-  max-width: 600px;
-  gap: 20px;
+  position: relative;
+  left: -1200px;
+  text-align: center;
+  height: 0;
+  overflow: hidden;
+  transition: 0.5s ease all;
+  cursor: pointer;
 }
 
-.video {
-  max-width: 480px;
-  display: none;
+.show_lesson {
+  min-height: 380px;
+  height: 100%;
+  left: 0;
+  transition: 0.5s all;
+}
+
+.lessons__text {
+  margin: 10px;
+  max-width: 500px;
+  padding: 20px;
+  background-color: #01435d;
+  border-radius: 10px;
+  gap: 10px;
+  margin-bottom: 50px;
+  color: aliceblue;
+  box-shadow: 10px 10px 10px black;
+  transition: 0.2s ease-in;
 }
 
 .videos {
-  justify-content: flex-start;
+  justify-content: start;
 }
 
-.block {
-  display: block;
-}
-
-.video_show {
-  display: none;
-  max-width: 220px;
-  width: 100%;
-  padding: 10px 20px;
-  background-color: antiquewhite;
-  color: black;
-  border-radius: 0 10px 10px 0;
-  transition: 0.4s ease-in-out;
-}
-
-.video_show:hover {
-  background-color: blueviolet;
-  color: aliceblue;
-}
-
-.video_show:active {
-  background-color: blueviolet;
-  color: aliceblue;
-  box-shadow: 0 0 20px blueviolet;
-}
-
-.video_style {
-  background-color: cadetblue;
-  box-shadow: 0 0 20px blueviolet;
+.themes {
+  gap: 10px;
 }
 
 .show__list {
+  display: block;
   max-width: 460px;
   width: 100%;
   padding: 20px;
@@ -60,9 +55,70 @@
   text-align: center;
   font-size: 20px;
   cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
   transition: 0.4s ease-in-out;
 }
 
 .show__list:hover {
   background-color: cadetblue;
+}
+
+.back {
+  display: block;
+  position: fixed;
+  z-index: 11;
+  right: 10px;
+  bottom: 20px;
+  color: aliceblue;
+  padding: 15px 25px;
+  background-color: red;
+  border-radius: 10px;
+  box-shadow: 0 0 10px red;
+  transition: 0.5s ease all;
+}
+.back span {
+  font-size: 25px;
+}
+
+.back:active {
+  transform: translateY(1px);
+  background-color: blue;
+  box-shadow: 0 0 10px blue;
+}
+
+.back:hover {
+  background-color: blue;
+  box-shadow: 0 0 10px blue;
+}
+
+.header__text-title {
+  color: green;
+  font-size: 24px;
+}
+
+.header__text-title2 {
+  color: yellowgreen;
+  font-size: 20px;
+}
+
+.header__text-title3 {
+  color: black;
+}
+
+.header__text-img {
+  width: 100%;
+}
+.header__text-img img {
+  width: 100%;
+}
+
+.map__methods {
+  margin-left: 20px;
+}
+.map__methods li {
+  list-style-type: disc;
+}
+
+.map__method {
+  color: yellow;
 }/*# sourceMappingURL=lessons.css.map */
