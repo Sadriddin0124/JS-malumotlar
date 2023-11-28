@@ -1,0 +1,20 @@
+let dark = document.getElementById('dark-btn')
+
+dark.addEventListener("click", () => {
+    document.getElementById("light-btn").classList.add("color")
+    document.getElementById("dark-btn").classList.add("color")
+    document.getElementById("header4").style.background = "rgb(22, 20, 20)"
+    document.getElementById("header4").classList.add("bg-dark")
+    document.getElementById("navbar4").classList.add("bg-dark")
+    document.getElementById("nav-item1").classList.add("color")
+    document.getElementById("nav-item2").classList.add("color")
+    document.getElementById("nav-item3").classList.add("color")
+    document.getElementById("nav-item4").classList.add("color")
+    document.getElementById("nav-item5").classList.add("color")
+    document.getElementById("nav-item6").classList.add("color")
+    document.getElementById("nav-item7").classList.add("color")
+    document.getElementById("nav-item8").classList.add("color")
+    document.getElementById("div1").classList.add("bg-light")
+    document.getElementById("div2").classList.add("bg-light")
+    document.getElementById("div3").classList.add("bg-light")
+})

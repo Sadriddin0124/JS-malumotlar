@@ -14,59 +14,22 @@ menu__link.addEventListener("click", () => {
 
 })
 
+ 
 
-const dark = ()=> {
-    document.getElementById("light-btn").classList.add("color")
-    document.getElementById("dark-btn").classList.add("color")
-    document.getElementById("header4").style.background = "rgb(22, 20, 20)"
-    document.getElementById("header4").classList.add("bg-dark")
-    document.getElementById("navbar4").classList.add("bg-dark")
-    document.getElementById("nav-item1").classList.add("color")
-    document.getElementById("nav-item2").classList.add("color")
-    document.getElementById("nav-item3").classList.add("color")
-    document.getElementById("nav-item4").classList.add("color")
-    document.getElementById("nav-item5").classList.add("color")
-    document.getElementById("nav-item6").classList.add("color")
-    document.getElementById("nav-item7").classList.add("color")
-    document.getElementById("nav-item8").classList.add("color")
-    document.getElementById("header").style.background = "rgb(22, 20, 20)"
-    document.getElementById("header").classList.add("bg-dark")
-    document.getElementById("navbar").style.background = "black"
-}
 
-function light () {
-    document.getElementById("light-btn").classList.remove("color")
-    document.getElementById("dark-btn").classList.remove("color")
-    document.getElementById("header4").style.background = "#fff"
-    document.getElementById("header4").classList.remove("bg-dark")
-    document.getElementById("navbar4").classList.remove("bg-dark")
-    document.getElementById("nav-item1").classList.remove("color")
-    document.getElementById("nav-item2").classList.remove("color")
-    document.getElementById("nav-item3").classList.remove("color")
-    document.getElementById("nav-item4").classList.remove("color")
-    document.getElementById("nav-item5").classList.remove("color")
-    document.getElementById("nav-item6").classList.remove("color")
-    document.getElementById("nav-item7").classList.remove("color")
-    document.getElementById("nav-item8").classList.remove("color")
-    document.getElementById("header").style.background = "#fff"
-    document.getElementById("header").classList.remove("bg-dark")
-    document.getElementById("navbar").classList.remove("bg-dark")
-    document.getElementById("nav-item1").classList.remove("color")
-    document.getElementById("nav-item2").classList.remove("color")
-    document.getElementById("nav-item3").classList.remove("color")
-    document.getElementById("nav-item4").classList.remove("color")
-}
-localStorage.setItem("dark", dark() )
-localStorage.setItem("light", light() )
+
+ 
+
 
 
 let lessons = document.getElementById('lessons')
 let lessons2 = document.getElementById('lessons2')
  
 
+let show__list = document.getElementById('show__list')
 let show__list2 = document.getElementById('show__list2')
 
-document.getElementById('show__list').addEventListener("click", () => {
+show__list.addEventListener("click", () => {
     lessons.classList.toggle('show_lesson')
 })
 show__list2.addEventListener("click", () => {
@@ -127,8 +90,6 @@ document.getElementById("show__list20").addEventListener("click", () => {
     document.getElementById("lessons20").classList.toggle('show_lesson')
 })
 
-
- 
 
 
 

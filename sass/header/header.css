@@ -81,9 +81,16 @@
   transition: 0.5s ease all;
 }
 
-.bg-dark2 {
+.bg-light {
   transition: 0.5s ease all;
-  background: rgb(22, 20, 20);
+  background: white;
+}
+
+.dark {
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: #fff;
+  background-color: blueviolet;
 }
 
 .contacts::before {
