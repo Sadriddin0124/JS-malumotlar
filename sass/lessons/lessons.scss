@@ -82,9 +82,9 @@
     bottom: 20px;
     color: aliceblue;
     padding: 15px 25px;
-    background-color: red;
+    background-color:#01435d;
     border-radius: 10px;
-    box-shadow: 0 0 10px red;
+    box-shadow: 0 0 10px black;
     transition:  .5s ease all;
     span {
         font-size: 25px;
@@ -93,13 +93,12 @@
 
 .back:active {
     transform: translateY(1px);
-    background-color: blue;
-    box-shadow: 0 0 10px blue;
+     
 } 
 
 .back:hover {
-    background-color: blue;
-    box-shadow: 0 0 10px blue;
+    background-color:burlywood;
+    box-shadow: 0 0 10px burlywood;
 }
 
 .header__text-title {
