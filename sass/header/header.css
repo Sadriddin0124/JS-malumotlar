@@ -1,11 +1,11 @@
-.contacts, .nav__list, .navbar__items, .navbar {
+.register__container, .contacts, .nav__list, .navbar__items, .navbar {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
 
-.header__card, .header, .menu {
+.register, .header__card, .header, .menu {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,9 +13,15 @@
   flex-wrap: wrap;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+}
+
 .navbar {
   position: fixed;
   top: 0;
+  right: 0;
   width: 100%;
   height: 70px;
   padding: 20px 20px 30px;
@@ -46,18 +52,19 @@
 
 .navbar__menu {
   position: absolute;
-  right: -220px;
+  right: -300px;
   top: 50px;
   background: #fff;
   width: 200px;
   padding: 10px;
   color: aliceblue;
   box-shadow: 0px 10px 10px black;
+  display: none;
 }
 
 .navbar__menu1 {
   right: -20px;
-  transition: 0.5s all;
+  transition: 0.5s ease all;
 }
 
 .contacts {
@@ -138,6 +145,7 @@
 }
 
 .menu {
+  display: none;
   position: relative;
   transition: 1s ease all;
   width: 30px;
@@ -157,12 +165,15 @@
 .div2 {
   display: none;
   transition: 0.5s ease all;
+  position: absolute;
+  right: 0;
+  top: -5px;
 }
 
 .div1 {
   transform: rotate(45deg);
   position: absolute;
-  right: 0;
+  right: -8px;
   top: -5px;
   transition: 0.5s ease all;
 }
@@ -170,7 +181,7 @@
 .div3 {
   transform: rotate(-45deg);
   position: absolute;
-  right: 0;
+  right: -8px;
   top: -5px;
   transition: 0.5s ease all;
 }
@@ -223,4 +234,60 @@
 
 .header__card-desc {
   font-size: 20px;
+}
+
+.register__container {
+  height: 90vh;
+}
+
+.register {
+  position: absolute;
+  z-index: 2;
+  gap: 20px;
+  background: #383737;
+  padding: 50px 10px;
+  max-width: 500px;
+  width: 100%;
+  border-radius: 10px;
+  transition: 0.5s all;
+  margin: 10px;
+}
+
+.register:hover {
+  box-shadow: 0 0 50px black;
+}
+
+.register__input {
+  padding: 10px;
+  border-radius: 5px;
+  max-width: 300px;
+  width: 100%;
+  outline: none;
+  border: none;
+}
+
+.register__input:focus {
+  box-shadow: 0 0 20px blue;
+}
+
+.register__title {
+  color: #fff;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.register__btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  transition: 0.5s all;
+  background: green;
+  color: #fff;
+}
+
+.register__btn:hover {
+  background-color: blue;
 }/*# sourceMappingURL=header.css.map */

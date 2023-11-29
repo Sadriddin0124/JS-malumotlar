@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS darslik</title>
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="./sass/styles.css">.
+    <link rel="stylesheet" href="./sass/styles.css">
+    <link rel="stylesheet" href="./sass/media/media.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -14,11 +15,21 @@
 
 
 <body>
-    <div class="container">
+    <!-- <div class="register__container" id="register__container">
+        <div class="register">
+            <h1 class="register__title">Registration</h1>
+            <input class="register__input" type="text" placeholder="Username" id="username">
+            <input class="register__input" type="password" placeholder="Password" id="password">
+            <button class="register__btn" id="register">Log In</button>
+        </div>
+    </div> -->
+    <div class="container" id="container">
         <nav class="navbar" id="navbar">
             <div class="navbar__items">
-                <div class="nav__logo">
-                    <img src="./images/nav__logo.webp" alt="">
+                <div class="burger" id="burger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
                 </div>
                 <ul class="nav__list">
                     <a class="contacts" href="/">home</a>
@@ -26,12 +37,15 @@
                     <a href="./html/lessons.html" class="contacts">Lessons</a>
                     <a class="contacts" href="./html/settings.html">Settings</a>
                 </ul>
-                <a id="menu__link" class="menu " href="#">
+                <div class="nav__logo">
+                    <img src="./images/nav__logo.webp" alt="">
+                </div>
+                <a id="menu__link" class="menu " href="#" style="display: none;">
                     <div class="div  " id="div1"></div>
                     <div class="div  " id="div2"></div>
                     <div class="div  " id="div3"></div>
                 </a>
-                <div id="menu" class="navbar__menu ">
+                <div id="menu" class="navbar__menu " style="display: none;">
                     <a class="contacts" href="/">home</a>
                     <a href="./html/contacts.html" class="contacts">contacts</a>
                     <a href="./html/lessons.html" class="contacts">Lessons</a>
@@ -39,6 +53,23 @@
                 </div>
             </div>
         </nav>
+        <aside class="left_bar" id="left__bar">
+            <div class="back__left" id="back__left" onclick="left()"><div class="corner"></div></div>
+            <div class="left__top">
+                <div class="left__img">
+                    <img src="./images/nav__logo.webp" alt="">
+                </div>
+                <h1 class="left__username">Sadriddin Ravshanov</h1>
+            </div>
+            <div class="left__body">
+                <ul class="left__list">
+                    <a class="contacts" href="/"> <i class="fa-solid fa-house"></i> home</a>
+                    <a href="./html/contacts.html" class="contacts"><i class="fa-solid fa-user"></i> contacts</a>
+                    <a href="./html/lessons.html" class="contacts"><i class="fa-solid fa-book-open"></i> Lessons</a>
+                    <a class="contacts" href="./html/settings.html"><i class="fa-solid fa-gear"></i> Settings</a>
+                </ul>
+            </div>
+        </aside>
         <header id="header" class="header">
             <h1 class="header__title">JS darslari bo'yicha ma'lumotlar</h1>
             <div class="header__card">
@@ -48,7 +79,7 @@
                 <p class="header__card-desc">Bu shunchaki o'tilgan darslar bo'yicha mustaqil yaratilgan project</p>
             </div>
         </header>
-        
+
         <footer class="footer">
             <h1 style="margin-bottom: 20px;" class="header__title">Contact Us</h1>
             <div class="footer__link">
@@ -61,7 +92,7 @@
             </div>
         </footer>
     </div>
-   <script src="./main.js"></script>
+    <script src="./main.js"></script>
 </body>
 
 </html>

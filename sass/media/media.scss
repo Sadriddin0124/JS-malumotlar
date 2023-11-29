@@ -3,25 +3,26 @@
         display: none;
     }
 
-    .menu {
-        display: block;
-    }
+    // .menu {
+    //     display: block;
+    // }
     .navbar__items {
         justify-content: space-between;
     }
     
     
-    .menu {
-        display: block;
-    }
+    // .menu {
+    //     display: block;
+    // }
 }
 
 @media (max-width: 447px) {
-    .show__list {
-        // max-width: 250px;
-        // margin-right: 10px; 
-    }
-    // .lessons {
-    //     width: 200px;
+     
+    // body {
+    //     width: 100%;
+    //     min-height: 150vh;
+    //     display: flex;
+    //     flex-direction: row;
     // }
+     
 }

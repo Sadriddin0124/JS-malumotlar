@@ -10,22 +10,27 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-     
-    </head>
+
+</head>
 
 <body>
     <div class="container">
         <nav class="navbar" id="navbar3">
             <div class="navbar__items">
+                <div class="burger" id="burger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <ul class="nav__list" id="nav__list">
+                    <a class="contacts" href="/">home</a>
+                    <a href="./contacts.html" class="contacts">contacts</a>
+                    <a href="./lessons.html" class="contacts">Lessons</a>
+                    <a href="./settings.html" class="contacts" >Settings</a>
+                </ul>
                 <div class="nav__logo">
                     <img src="../images/nav__logo.webp" alt="">
                 </div>
-                <ul class="nav__list" id="nav__list">
-                    <a  class="contacts" href="/">home</a>
-                    <a  href="./contacts.html" class="contacts">contacts</a>
-                    <a  href="./lessons.html" class="contacts">Lessons</a>
-                    <a  class="contacts" href="./settings.html">Settings</a>
-                </ul>
                 <a id="menu__link" class="menu " href="#">
                     <div class="div  " id="div1"></div>
                     <div class="div  " id="div2"></div>
@@ -35,13 +40,30 @@
                     <a class="contacts" href="/">home</a>
                     <a href="./contacts.html" class="contacts">contacts</a>
                     <a href="./lessons.html" class="contacts">Lessons</a>
-                    <a class="contacts" href="./settings.html">Settings</a>
-                </div>
+                    <a href="./settings.html" class="contacts" >Settings</a>                </div>
             </div>
         </nav>
+        <aside class="left_bar" id="left__bar">
+            <div class="back__left" id="back__left" onclick="left()"><div class="corner"></div></div>
+            <div class="left__top">
+                <div class="left__img">
+                    <img src="../images/nav__logo.webp" alt="">
+                </div>
+                <h1 class="left__username">Sadriddin Ravshanov</h1>
+            </div>
+            <div class="left__body">
+                <ul class="left__list">
+                    <a class="contacts" href="/"> <i class="fa-solid fa-house"></i> home</a>
+                    <a href="./contacts.html" class="contacts"><i class="fa-solid fa-user"></i> contacts</a>
+                    <a href="./lessons.html" class="contacts"><i class="fa-solid fa-book-open"></i> Lessons</a>
+                    <a class="contacts" href="./settings.html"><i class="fa-solid fa-gear"></i> Settings</a>
+                </ul>
+            </div>
+        </aside>
         <header class="header" id="header3">
             <h1 style="margin-bottom: 20px;" class="header__title">Contact Us</h1>
-            <a href="https://t.me/farkhodo_vich" class="contacts__link telegram"><i class="fa-brands fa-telegram"></i></a>
+            <a href="https://t.me/farkhodo_vich" class="contacts__link telegram"><i
+                    class="fa-brands fa-telegram"></i></a>
             <a href="https://instagram.com/farkhodo_vich" class="contacts__link instagram"><i
                     class="fa-brands fa-instagram"></i></a>
             <a href="https://github.com/Sadriddin0124" class="contacts__link github"><i

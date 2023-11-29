@@ -16,8 +16,10 @@
     <div class="container">
         <nav class="navbar" id="navbar4">
             <div class="navbar__items">
-                <div class="nav__logo">
-                    <img src="../images/nav__logo.webp" alt="">
+                <div class="burger" id="burger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
                 </div>
                 <ul class="nav__list">
                     <a id="nav-item1" class="contacts" href="/">home</a>
@@ -25,6 +27,9 @@
                     <a id="nav-item3" href="./lessons.html" class="contacts">Lessons</a>
                     <a id="nav-item4" class="contacts" href="./settings.html">Settings</a>
                 </ul>
+                <div class="nav__logo">
+                    <img src="../images/nav__logo.webp" alt="">
+                </div>
                 <a id="menu__link" class="menu " href="#">
                     <div class="div  " id="div1"></div>
                     <div class="div  " id="div2"></div>
@@ -38,9 +43,26 @@
                 </div>
             </div>
         </nav>
+        <aside class="left_bar" id="left__bar">
+            <div class="back__left" id="back__left" onclick="left()"><div class="corner"></div></div>
+            <div class="left__top">
+                <div class="left__img">
+                    <img src="../images/nav__logo.webp" alt="">
+                </div>
+                <h1 class="left__username">Sadriddin Ravshanov</h1>
+            </div>
+            <div class="left__body">
+                <ul class="left__list">
+                    <a class="contacts" href="/"> <i class="fa-solid fa-house"></i> home</a>
+                    <a href="./contacts.html" class="contacts"><i class="fa-solid fa-user"></i> contacts</a>
+                    <a href="./lessons.html" class="contacts"><i class="fa-solid fa-book-open"></i> Lessons</a>
+                    <a class="contacts" href="./settings.html"><i class="fa-solid fa-gear"></i> Settings</a>
+                </ul>
+            </div>
+        </aside>
         <header class="header" id="header4">
-             <button class="dark" id="dark-btn">Dark</button>
-             <button class="dark" id="light-btn">Light</button>
+            <button class="dark" id="dark-btn">Dark</button>
+            <button class="dark" id="light-btn">Light</button>
         </header>
     </div>
     <script src="../main.js"></script>

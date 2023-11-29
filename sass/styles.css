@@ -3,6 +3,7 @@
 @import url("./media/media.css");
 @import url("./lessons/lessons.css");
 @import url("./footer/footer.css");
+@import url("./left/left.css");
 * {
   padding: 0;
   margin: 0;

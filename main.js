@@ -1,27 +1,51 @@
 "use strict"
 let menu__link = document.getElementById('menu__link')
-let menu = document.getElementById('menu')
-let div1 = document.getElementById('div1')
-let div2 = document.getElementById('div2')
-let div3 = document.getElementById('div3')
- 
+
 
 menu__link.addEventListener("click", () => {
-    menu.classList.toggle('navbar__menu1')
-    div1.classList.toggle('div1')
-    div2.classList.toggle('div2')
-    div3.classList.toggle('div3')
-
+    document.getElementById('menu').classList.toggle('navbar__menu1')
+    document.getElementById('div3').classList.toggle('div3')
+    document.getElementById('div1').classList.toggle('div1')
+    document.getElementById('div2').classList.toggle('div2')
 })
 
- 
+let burger = document.getElementById("burger")
+let left__bar = document.getElementById("left__bar")
+let back__left = document.getElementById("back__left")
+burger.addEventListener("click", () =>{
+    left__bar.classList.toggle("right")
 
+})
+.back__left.addEventListener("click", () => {
+})
+function left () {
+    left__bar.classList.toggle("right")
 
+}
 
- 
-
-
-
+let container = document.getElementById("container")
+let register__container = document.getElementById("register__container")
+// container.style.display = "none"
+register__container.style.display = "none"
+let register = document.getElementById("register")
+register.addEventListener("click",()=> {
+    let username = document.getElementById("username")
+    let password = document.getElementById("password")
+    console.log(username.value)
+    console.log(password.value)
+    if (username.value === "farkhodo_vich") {
+        container.style.display = "block"
+        register__container.style.display = "none"
+    }
+    save_login()
+})
+function save_login () {
+    localStorage.setItem("save", register())
+}
+function get_login () {
+    localStorage.getItem("save")
+}
+get_login()
 let lessons = document.getElementById('lessons')
 let lessons2 = document.getElementById('lessons2')
  
