@@ -3,11 +3,11 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  flex-wrap: wrap;
 }
 
 .lessons {
   position: relative;
+  max-width: 500px;
   left: -1200px;
   text-align: center;
   height: 0;
@@ -26,6 +26,7 @@
 .lessons__text {
   margin: 10px;
   max-width: 500px;
+  width: 100%;
   padding: 20px;
   background-color: #01435d;
   border-radius: 10px;
@@ -42,6 +43,8 @@
 
 .themes {
   gap: 10px;
+  max-width: 500px;
+  width: 100%;
 }
 
 .show__list {

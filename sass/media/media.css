@@ -11,9 +11,4 @@
   .menu {
     display: block;
   }
-}
-@media (max-width: 447px) {
-  .show__list {
-    max-width: 250px;
-  }
 }/*# sourceMappingURL=media.css.map */
