@@ -9,46 +9,33 @@ menu__link.addEventListener("click", () => {
     document.getElementById('div2').classList.toggle('div2')
 })
 
-let burger = document.getElementById("burger")
-let left__bar = document.getElementById("left__bar")
-let back__left = document.getElementById("back__left")
-burger.addEventListener("click", () =>{
-    left__bar.classList.toggle("right")
 
-})
-.back__left.addEventListener("click", () => {
-})
-function left () {
-    left__bar.classList.toggle("right")
-
-}
-
-let container = document.getElementById("container")
-let register__container = document.getElementById("register__container")
-// container.style.display = "none"
-register__container.style.display = "none"
-let register = document.getElementById("register")
-register.addEventListener("click",()=> {
-    let username = document.getElementById("username")
-    let password = document.getElementById("password")
-    console.log(username.value)
-    console.log(password.value)
-    if (username.value === "farkhodo_vich") {
-        container.style.display = "block"
-        register__container.style.display = "none"
-    }
-    save_login()
-})
-function save_login () {
-    localStorage.setItem("save", register())
-}
-function get_login () {
-    localStorage.getItem("save")
-}
-get_login()
+// let container = document.getElementById("container")
+// let register__container = document.getElementById("register__container")
+// // container.style.display = "none"
+// register__container.style.display = "none"
+// let register = document.getElementById("register")
+// register.addEventListener("click",()=> {
+//     let username = document.getElementById("username")
+//     let password = document.getElementById("password")
+//     console.log(username.value)
+//     console.log(password.value)
+//     if (username.value === "farkhodo_vich") {
+//         container.style.display = "block"
+//         register__container.style.display = "none"
+//     }
+//     save_login()
+// })
+// function save_login () {
+//     localStorage.setItem("save", register())
+// }
+// function get_login () {
+    //     localStorage.getItem("save")
+    // }
+    // get_login()
 let lessons = document.getElementById('lessons')
 let lessons2 = document.getElementById('lessons2')
- 
+
 
 let show__list = document.getElementById('show__list')
 let show__list2 = document.getElementById('show__list2')
@@ -118,6 +105,7 @@ document.getElementById("show__list20").addEventListener("click", () => {
 document.getElementById("dark-btn").addEventListener("click", ()=> {
     document.getElementById("header")
 })
+
 
 
 
