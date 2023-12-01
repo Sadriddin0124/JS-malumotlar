@@ -100,6 +100,30 @@ document.getElementById("show__list19").addEventListener("click", () => {
 document.getElementById("show__list20").addEventListener("click", () => {
     document.getElementById("lessons20").classList.toggle('show_lesson')
 })
+document.getElementById("show__list21").addEventListener("click", () => {
+    document.getElementById("lessons21").classList.toggle('show_lesson')
+})
+document.getElementById("show__list22").addEventListener("click", () => {
+    document.getElementById("lessons22").classList.toggle('show_lesson')
+})
+document.getElementById("show__list23").addEventListener("click", () => {
+    document.getElementById("lessons23").classList.toggle('show_lesson')
+})
+document.getElementById("show__list24").addEventListener("click", () => {
+    document.getElementById("lessons24").classList.toggle('show_lesson')
+})
+document.getElementById("show__list25").addEventListener("click", () => {
+    document.getElementById("lessons25").classList.toggle('show_lesson')
+})
+document.getElementById("show__list26").addEventListener("click", () => {
+    document.getElementById("lessons26").classList.toggle('show_lesson')
+})
+document.getElementById("show__list27").addEventListener("click", () => {
+    document.getElementById("lessons27").classList.toggle('show_lesson')
+})
+document.getElementById("show__list28").addEventListener("click", () => {
+    document.getElementById("lessons28").classList.toggle('show_lesson')
+})
 
 
 document.getElementById("dark-btn").addEventListener("click", ()=> {

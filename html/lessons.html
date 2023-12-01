@@ -396,10 +396,87 @@
                         </div>
                     </div>
                 </div>
-                <span class="show__list" id="show__list19"></span>
-                <div class="lessons" id="lessons19"></div>
-                <span class="show__list" id="show__list20"></span>
-                <div class="lessons" id="lessons20"></div>
+                <span class="show__list" id="show__list19">Functional Programming</span>
+                <div class="lessons" id="lessons19">
+                    <div class="lessons__text"><span class="green">Functional Programming declarative programming paradigm</span>lar sinfiga mansub bo'lib,  dasturni <span class="green">pure functionlar</span> orqali ishlatishni ilgari suradi. BU orqali kod tushunarli, boshqarishga oson, qayta ishlatsa bo'ladigan va testlashga oson bo'ladi. Functional programmingda quyidagi conceptsiyalar mavjud: <span class="green">Immutability, Pure Function, Higher ordered functions, first-class function, Currying, Recursion, Composition</span></div>
+                </div>
+                <span class="show__list" id="show__list20">Immutability</span>
+                <div class="lessons" id="lessons20">
+                    <div class="lessons__text">
+                        <span class="green">Immutability</span> - bu dasturdagi data (object, array ...) larni aslini o'zgartirmasdan ular bila ishlash. Bunda arraylar bilan ishlaganda butable methodlardan iloji boricha qochiladi. Masalan: sort(), reverse() lar o'rniga map(), filter(), reduce() kabi methodlar ishlatiladi
+                    </div>
+                </div>
+                <span class="show__list" id="show__list21">Pure function</span>
+                <div class="lessons" id="lessons21">
+                    <div class="lessons__text" style="align-items: flex-start;">
+                        <p class="header__text-title2">Pure Function tashqi tomondagi variablega bog'liq bo'lmaydi va argumentga bog'liq bo'lib qiymat qaytaradi va side effect yo'q</p>
+                        <p>let a = 5</p>
+                        <p>let a = 7</p>
+                        <p>function pureFn (a, b) {</p>
+                        <p>return a + b</p>
+                        <p>}</p>
+                        <p>pureFn(a, b)</p>
+                         
+                        <p>function pureFn (a, b) {</p>
+                        <p>return a + b</p>
+                        <p>}</p>
+                        <p>pureFn(4, 8)</p>
+                        <p class="header__text-title"><span class="red">Side effect</span> - tashqi tomondan qanaqadir variable ni o'ziga qabul qilish</p>
+                    </div>
+                </div>
+                <span class="show__list" id="show__list22">Impure Function</span>
+                <div class="lessons" id="lessons22">
+                    <div class="lessons__text" style="align-items: flex-start;">
+                        <p class="header__text-title"><span class=" red">Impure Function</span> tashqi tomondagi varuable ga bog'liq bo'ladi va unda side effect bor</p>
+                        <p>let a = 5</p>
+                        <p>let a = 7</p>
+                        <p>function pureFn (a, b) {</p>
+                        <p>return a + b</p>
+                        <p>}</p>
+                        <p>pureFn(a, b)</p>
+                    </div>
+                </div>
+                <span class="show__list" id="show__list23">First-class function</span>
+                <div class="lessons" id="lessons23" >
+                    <div class="lessons__text " style="align-items: flex-start;">
+                        <p><span class="green">First-class function</span> - variable ga bersa bo'ladigan - function expression, argument sifatida bersa bo'ladigan - callback function, boshqa functiondan return qilsa bo'ladigan va <span class="red">property</span> bersa saqlay oladigan functionlar. (Function - bu object va objectlarday ishlay olishi) Ya'ni JS da hamma functionlar first-class functionga kiradi.</p>
+                        <p>function fn1 (){</p>
+                        <p>}</p>
+                        <p>console.log(fn1.name = "Sadriddin")</p>
+                    </div>
+                </div>
+                <span class="show__list" id="show__list24">Higher-ordered Function</span>
+                <div class="lessons" id="lessons24">
+                    <div class="lessons__text">
+                        <p><span class="green">Higher-ordered Function</span> - argument sifatida function oladigan yoki function qaytaradigan functionlar. Bularga misol: Array.prototype.map, Array.prototype.reduce, Array.prototype.find </p>
+                        <p><span class="red">filter(), forEach() va callback functionlar</span> va boshqalar ham kiradi</p>
+                    </div>
+                </div>
+                <span class="show__list" id="show__list25">Currying</span>
+                <div class="lessons" id="lessons25">
+                    <div class="lessons__text" style="align-items: flex-start;">
+                        <p><span class="green">Currying</span> - functionlarni bir necha qismlarga bo'lib alohida chaqirish usuli</p>
+                        <p>const curriedFn =(a)=> {</p>
+                        <p>return (b)=> {</p>
+                        <p>return (c)=> {</p>
+                            <p>console.log(a + b + c)</p>
+                            <p>}</p>
+                            <p>}</p>
+                        <p>}</p>
+                        <p>curriedFn(1)(2)(3)</p>
+                        <p class="header__text-title3">Bu yerda <span class="red">closure </span>ham sodir bo'lmoqda</p>
+                    </div>
+                </div>
+                <span class="show__list" id="show__list26"></span>
+                <div class="lessons" id="lessons26"></div>
+                <span class="show__list" id="show__list27"></span>
+                <div class="lessons" id="lessons27"></div>
+                <span class="show__list" id="show__list28"></span>
+                <div class="lessons" id="lessons28"></div>
+                <span class="show__list" id="show__list29"></span>
+                <div class="lessons" id="lessons29"></div>
+                <span class="show__list" id="show__list30"></span>
+                <div class="lessons" id="lessons30"></div>
             </div>
 
         </header>
