@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Settings</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
     <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../sass/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -12,7 +15,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body>
+<body onload="onload()">
     <div class="container">
         <nav class="navbar" id="navbar4">
             <div class="navbar__items">
@@ -28,7 +31,7 @@
                     <a id="nav-item4" class="contacts" href="./settings.html">Settings</a>
                 </ul>
                 <div class="nav__logo">
-                    <img src="../images/logo.png" alt=""  >
+                    <img src="../images/logo.png" alt="">
                 </div>
                 <a id="menu__link" class="menu " href="#">
                     <div class="div  " id="div1"></div>
@@ -44,7 +47,9 @@
             </div>
         </nav>
         <aside class="left_bar" id="left__bar">
-            <div class="back__left" id="back__left" onclick="left()"><div class="corner"></div></div>
+            <div class="back__left" id="back__left" onclick="left()">
+                <div class="corner"></div>
+            </div>
             <div class="left__top">
                 <div class="left__img">
                     <img src="../images/nav__logo.webp" alt="">
@@ -61,8 +66,10 @@
             </div>
         </aside>
         <header class="header" id="header4">
-            <button class="dark" id="dark-btn">Dark</button>
-            <button class="dark" id="light-btn">Light</button>
+            <input type="checkbox" name="click" id="cb1" /><label for="cb1" onclick="darkmode()">Dark</label>
+            <input type="checkbox" name="click" id="cb2" /><label for="cb2" onclick="darkmode()">Light</label>
+            <!-- Ionicons -->
+
         </header>
         <footer class="footer">
             <h1 style="margin-bottom: 20px;" class="footer__title">Contact Us</h1>
@@ -75,9 +82,12 @@
                         class="fa-brands fa-github "></i></a>
             </div>
         </footer>
+    <a id="back" href="../index.html" class="back"> <span>&#8592;</span> BACK </a>
     </div>
     <script src="../main.js"></script>
     <script src="../settings.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>

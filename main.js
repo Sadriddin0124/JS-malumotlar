@@ -127,10 +127,16 @@ document.getElementById("show__list28").addEventListener("click", () => {
 })
 
 
-document.getElementById("dark-btn").addEventListener("click", ()=> {
-    document.getElementById("header")
-})
+function darkmode() {
+    const wasDarkmode = localStorage.getItem('darkmode') === 'true'
+    localStorage.setItem('darkmode', !wasDarkmode)
+    const element = document.body
+    element.classList.toggle('dark-mode')
+    element.classList.toggle('shadow')
+ }
 
-
+function onload () {
+    document.body.classList.toggle('dark-mode', localStorage.getItem('darkmode') === 'true')
+}
 
 
