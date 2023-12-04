@@ -40,6 +40,7 @@
     background-color: #01435d;
     border-radius: 10px;
     @extend %flex-column;
+    align-items: flex-start;
     gap: 10px;
     margin-bottom: 50px;
     color: aliceblue;

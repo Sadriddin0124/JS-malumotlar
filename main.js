@@ -13,7 +13,7 @@ menu__link.addEventListener("click", () => {
 // let container = document.getElementById("container")
 // let register__container = document.getElementById("register__container")
 // // container.style.display = "none"
-// register__container.style.display = "none"
+// // register__container.style.display = "none"
 // let register = document.getElementById("register")
 // register.addEventListener("click",()=> {
 //     let username = document.getElementById("username")
@@ -21,18 +21,19 @@ menu__link.addEventListener("click", () => {
 //     console.log(username.value)
 //     console.log(password.value)
 //     if (username.value === "farkhodo_vich") {
-//         container.style.display = "block"
-//         register__container.style.display = "none"
+//         let block = container.style.display = "block"
+//         let none = register__container.style.display = "none"
+//             localStorage.setItem("none", none)
+//             localStorage.setItem("block", block)
+         
 //     }
-//     save_login()
 // })
-// function save_login () {
-//     localStorage.setItem("save", register())
-// }
 // function get_login () {
-    //     localStorage.getItem("save")
-    // }
-    // get_login()
+//         localStorage.getItem("none")
+//         localStorage.getItem("block")
+// }
+
+// get_login()
 let lessons = document.getElementById('lessons')
 let lessons2 = document.getElementById('lessons2')
 

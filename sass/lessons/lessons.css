@@ -30,6 +30,7 @@
   padding: 20px;
   background-color: #01435d;
   border-radius: 10px;
+  align-items: flex-start;
   gap: 10px;
   margin-bottom: 50px;
   color: aliceblue;
