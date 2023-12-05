@@ -46,6 +46,8 @@ body, html, .header {
 .footer {
     background: var(--background);
     transition: .5s ease all;
+    background-size: cover;
+    background-position: center;
 }
 
 .show__list {
@@ -97,4 +99,8 @@ body:not(.dark-mode) {
     --box-shadow4: 3px 5px 10px #ff4757;
     --background: url('../images/footer2.jpg');
     --background2: rgba(255, 255, 255, 0.1);
+}
+
+p {
+    font-size: 20px !important;
 }

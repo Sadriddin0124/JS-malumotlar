@@ -1,3 +1,13 @@
+@media (max-width: 1300px) {
+  .themes {
+    grid-template-columns: auto auto;
+  }
+}
+@media (max-width: 990px) {
+  .themes {
+    grid-template-columns: auto;
+  }
+}
 @media (max-width: 789px) {
   .nav__list {
     display: none;

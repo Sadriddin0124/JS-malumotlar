@@ -1,3 +1,15 @@
+@media (max-width: 1300px) {
+    .themes {
+        grid-template-columns: auto auto;
+    }
+}
+
+@media (max-width: 990px) {
+    .themes {
+        grid-template-columns: auto;
+    }
+}
+
 @media (max-width: 789px) {
     .nav__list {
         display: none;
@@ -9,20 +21,20 @@
     .navbar__items {
         justify-content: space-between;
     }
-    
-    
+
+
     // .menu {
     //     display: block;
     // }
 }
 
 @media (max-width: 447px) {
-     
+
     // body {
     //     width: 100%;
     //     min-height: 150vh;
     //     display: flex;
     //     flex-direction: row;
     // }
-     
+
 }

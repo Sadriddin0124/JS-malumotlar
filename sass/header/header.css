@@ -1,11 +1,11 @@
-.register__container, .contacts, .nav__list, .navbar__items, .navbar {
+.register__container, .header, .contacts, .nav__list, .navbar__items, .navbar {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
 
-.register, .header__card, .header, .menu {
+.register, .header__card, .menu {
   display: flex;
   justify-content: center;
   align-items: center;
