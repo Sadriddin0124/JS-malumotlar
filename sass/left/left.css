@@ -95,7 +95,7 @@
 }
 
 .right {
-  left: 1px;
+  left: 0;
   transition: 0.5s all;
 }
 

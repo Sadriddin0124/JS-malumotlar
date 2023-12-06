@@ -10,3 +10,7 @@ function left () {
     left__bar.classList.toggle("right")
 }
 
+function remove () {
+    left__bar.classList.remove("right")
+}
+
