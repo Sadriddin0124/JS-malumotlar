@@ -94,13 +94,8 @@
   transform: translatex(-1px);
 }
 
-.left {
-  left: -500px;
-  transition: 0.5s all;
-}
-
 .right {
-  left: 0;
+  left: 1px;
   transition: 0.5s all;
 }
 

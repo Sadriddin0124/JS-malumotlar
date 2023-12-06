@@ -15,13 +15,14 @@
 .lessons {
   position: relative;
   max-width: 450px;
-  top: -100px;
+  top: -90px;
   text-align: center;
   height: 0;
   overflow: hidden;
   transition: 0.5s ease all;
   cursor: pointer;
   z-index: -1;
+  margin-bottom: 30px;
 }
 
 .show_lesson {
@@ -41,9 +42,9 @@
   border-radius: 10px;
   align-items: flex-start;
   gap: 10px;
+  box-shadow: 10px 10px 10px black;
   margin-bottom: 50px;
   color: aliceblue;
-  box-shadow: 10px 10px 10px black;
   transition: 0.2s ease-in;
 }
 
