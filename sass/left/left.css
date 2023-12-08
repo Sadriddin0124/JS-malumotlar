@@ -94,6 +94,11 @@
   transform: translatex(-1px);
 }
 
+.left {
+  transform: scale(0.9);
+  transition: 0.1s all;
+}
+
 .right {
   left: 0;
   transition: 0.5s all;

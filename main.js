@@ -1,39 +1,5 @@
 "use strict"
-let menu__link = document.getElementById('menu__link')
-
-
-menu__link.addEventListener("click", () => {
-    document.getElementById('menu').classList.toggle('navbar__menu1')
-    document.getElementById('div3').classList.toggle('div3')
-    document.getElementById('div1').classList.toggle('div1')
-    document.getElementById('div2').classList.toggle('div2')
-})
-
-
-// let container = document.getElementById("container")
-// let register__container = document.getElementById("register__container")
-// // container.style.display = "none"
-// // register__container.style.display = "none"
-// let register = document.getElementById("register")
-// register.addEventListener("click",()=> {
-//     let username = document.getElementById("username")
-//     let password = document.getElementById("password")
-//     console.log(username.value)
-//     console.log(password.value)
-//     if (username.value === "farkhodo_vich") {
-//         let block = container.style.display = "block"
-//         let none = register__container.style.display = "none"
-//             localStorage.setItem("none", none)
-//             localStorage.setItem("block", block)
-         
-//     }
-// })
-// function get_login () {
-//         localStorage.getItem("none")
-//         localStorage.getItem("block")
-// }
-
-// get_login()
+ 
 let lessons = document.getElementById('lessons')
 let lessons2 = document.getElementById('lessons2')
 
@@ -139,4 +105,5 @@ function onload () {
     document.body.classList.toggle('dark-mode', localStorage.getItem('darkmode') === 'true')
 }
 
+ 
 
