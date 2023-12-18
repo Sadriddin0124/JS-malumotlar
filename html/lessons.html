@@ -1,658 +1,929 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lessons</title>
-    <link rel="stylesheet" href="../sass/styles.css">
-    <link rel="stylesheet" href="../sass/media/media.css">
-    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
+    <link rel="stylesheet" href="../sass/styles.css" />
+    <link rel="stylesheet" href="../sass/media/media.css" />
+    <link
+      rel="shortcut icon"
+      href="../images/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
 
-<body onload="onload()">
-    <a id="back" href="../index.html" class="back"> <span>&#8592;</span> BACK </a>
+  <body onload="onload()">
+    <a id="back" href="../index.html" class="back">
+      <span>&#8592;</span> BACK
+    </a>
     <div class="container">
-        <nav class="navbar">
-            <div class="navbar__items">
-                <div class="burger" id="burger" onclick="left()">
-                    <div></div>
-                    <div></div>
-                    <div></div>
+      <nav class="navbar">
+        <div class="navbar__items">
+          <div class="burger" id="burger" onclick="left()">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <ul class="nav__list" id="nav__list">
+            <a class="contacts" href="/">home</a>
+            <a href="./contacts.html" class="contacts">contacts</a>
+            <a href="./lessons.html" class="contacts">Lessons</a>
+            <a href="./settings.html" class="contacts">Settings</a>
+          </ul>
+          <div class="nav__logo">
+            <img src="../images/logo.png" alt="" />
+          </div>
+        </div>
+      </nav>
+      <aside class="left_bar" id="left__bar">
+        <div class="back__left" id="back__left" onclick="left()">
+          <div class="corner"></div>
+        </div>
+        <div class="moon" onclick="darkmode()">
+          <i class="fa-solid fa-moon"></i>
+        </div>
+        <div class="left__top">
+          <div class="moon" onclick="darkmode()">
+            <i class="fa-solid fa-moon"></i>
+          </div>
+          <div class="left__img">
+            <img src="../images/nav__logo.webp" alt="" />
+          </div>
+          <h1 class="left__username">Sadriddin Ravshanov</h1>
+        </div>
+        <div class="left__body">
+          <ul class="left__list">
+            <a class="contacts" href="/">
+              <i class="fa-solid fa-house"></i> home</a
+            >
+            <a href="./contacts.html" class="contacts"
+              ><i class="fa-solid fa-user"></i> contacts</a
+            >
+            <a href="./lessons.html" class="contacts"
+              ><i class="fa-solid fa-book-open"></i> Lessons</a
+            >
+            <a class="contacts" href="./settings.html"
+              ><i class="fa-solid fa-gear"></i> Settings</a
+            >
+          </ul>
+        </div>
+      </aside>
+      <header class="header" onclick="remove()">
+        <div class="themes">
+          <div class="lessons__card">
+            <span class="show__list" id="show__list" onclick="show_lesson()"
+              >Execution Context</span
+            >
+            <div class="lessons" id="lessons">
+              <div class="lessons__text">
+                <p class="header__text-title">
+                  Execution context 2 ga bo'linadi:
+                </p>
+                <p class="header__text-title2">1. Global Execution Context</p>
+                <p class="header__text-title">
+                  Global Execution Context 2ga bo'linadi:
+                </p>
+                <p class="header__text-title3">1. Creation Phase</p>
+                <p>
+                  Bu bosqichda hoisting hodissai sodir bo'ladi va brauzer
+                  conelarni bir marta to'liq o'qib chiqadi va variable nomini
+                  o'rganib chiqadi
+                </p>
+                <p class="header__text-title3">2. Execution Phase</p>
+                <p>
+                  Bu bosqichda o'zgaruvchilar qiymatini o'zlashtirib chiqadi
+                </p>
+                <p class="header__text-title2">2. Function Execution Context</p>
+                <p>
+                  Bu bosqichda ham xuddi shu hodisalar bo'lib o'tadi faqat
+                  barchasi function scope {} ichida ro'y beradi
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="lessons__card">
+            <span class="show__list" id="show__list2" onclick="show_lesson()">
+              Lexical Environment</span
+            >
+            <div class="lessons" id="lessons2">
+              <div class="lessons__text">
+                <p class="header__text-title">Lexical environment</p>
+                <p>
+                  Har bir scope {} ichidage muhit lexical environment deyiladi
+                </p>
+                <p class="header__text-title2">Scope{}lar 3ga bo'linadi:</p>
+                <p class="header__text-title3">1. Global scope{}</p>
+                <p>Bu butun bir JS fayl degani</p>
+                <p class="header__text-title3">2. Function scope{}</p>
+                <p>
+                  Function ichida yozilgan codelar function scope ichida
+                  yozilgan bo'ladi
+                </p>
+                <p class="header__text-title3">3. Block scope{}</p>
+                <p>
+                  Bu shunchaki scope ochib ishlatish { let name = 'Sadriddin' }
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="lessons__card">
+            <span class="show__list" id="show__list3" onclick="show_lesson()">
+              Scope Chain</span
+            >
+            <div class="lessons" id="lessons3">
+              <div class="lessons__text">
+                <div class="header__text-img">
+                  <img src="../images/scope-chain.png" alt="" />
                 </div>
-                <ul class="nav__list" id="nav__list">
-                    <a class="contacts" href="/">home</a>
-                    <a href="./contacts.html" class="contacts">contacts</a>
-                    <a href="./lessons.html" class="contacts">Lessons</a>
-                    <a href="./settings.html" class="contacts" >Settings</a>
+                <p class="header__text-title2">
+                  Scope Chain bu tashqaridan ichkariga kirish
+                </p>
+                <p>
+                  Agar "name"ni funksiya ichiga chaqirsak ishlaydi lekin
+                  funksiya ichidagi "age"ni tashqariga chaqirsak Reference Error
+                  beradi
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="lessons__card">
+            <span class="show__list" id="show__list4" onclick="show_lesson()">
+              Closure (zamikanya)</span
+            >
+            <div class="lessons" id="lessons4">
+              <div class="lessons__text">
+                <div class="header__text-img">
+                  <img src="../images/closure.png" alt="closure" />
+                </div>
+                <div class="header__text-img">
+                  <img src="../images/clo.png" alt="closure" />
+                </div>
+                <p class="header__text-title2">
+                  Ota functionning argumentiga berilgan qiymatni ichkaridagi
+                  functionga chaqirib ishlatish
+                  <span class="red">closure</span> deb ataladi
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="lessons__card">
+            <span class="show__list" id="show__list5" onclick="show_lesson()">
+              this</span
+            >
+            <div class="lessons" id="lessons5">
+              <div class="lessons__text">
+                <div class="header__text-img">
+                  <img src="../images/this.png" alt="tthis" />
+                </div>
+                <p class="header__text-title">
+                  <span class="yellow">this</span>
+                  global contextga objectga ya'ni window objectiga bo'lgan
+                  yo'nalishni ko'rsatadi. Uning yo'nalishi joylashuviga qarab
+                  o'zgaradi.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="lessons__card">
+            <span class="show__list" id="show__list6" onclick="show_lesson()">
+              call, bind, apply</span
+            >
+            <div class="lessons" id="lessons6">
+              <div class="lessons__text">
+                <p class="header__text-title">call</p>
+                <div class="header__text-img">
+                  <img src="../images/call.png" alt="" />
+                </div>
+                <p>
+                  object <span class="red">call </span> qilinganda this ning
+                  yo'nalishi 2-objectga o'zgaradi va 2-objectning valuesini
+                  chiqaradi
+                </p>
+                <div class="header__text-img">
+                  <img src="../images/bind.png" alt="" />
+                </div>
+                <p>
+                  object <span class="red">bind </span> qilinganda this ning
+                  yo'nalishi 2-objectga o'zgaradi va 2-objectning valuesini
+                  chiqaradi, uning <span class="red">call</span> dan farqi uni
+                  funksiya qilib chaqirish kerak
+                </p>
+                <div class="header__text-img">
+                  <img src="../images/apply.png" alt="" />
+                </div>
+                <p>
+                  object <span class="red">apply</span> qilinganda this ning
+                  yo'nalishi 2-objectga o'zgaradi va 2-objectning valuesini
+                  chiqaradi, uning boshqalaridan farqi funksiya argumentini
+                  <span class="red">array[]</span> ga olib berish kerak
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="lessons__card">
+            <span class="show__list" id="show__list7" onclick="show_lesson()">
+              Constructor Function va Classlar</span
+            >
+            <div class="lessons" id="lessons7">
+              <div class="lessons__text">
+                <p class="header__text-title2">Constructor Function</p>
+                <div class="header__text-img">
+                  <img
+                    src="../images/constructor1.png"
+                    alt="Constructor Function"
+                  />
+                </div>
+                <p>
+                  <span class="red">Constructor Function</span> object
+                  yaratilishda ishlatiladi va unda 1dan ortiq objectlar yaratish
+                  mumkin. Unda yaratilgan funksiya(methodlar)lar unga
+                  <span class="yellow">property</span> sifatida qo'shiladi
+                </p>
+                <p class="header__text-title2">Class</p>
+                <div class="header__text-img">
+                  <img src="../images/class1.png" alt="Class" />
+                </div>
+                <div class="header__text-img">
+                  <img src="../images/class2.png" alt="Class" />
+                </div>
+                <div class="header__text-img">
+                  <img src="../images/class3.png" alt="Class" />
+                </div>
+                <div class="header__text-img">
+                  <img src="../images/class4.png" alt="Class" />
+                </div>
+                <p>
+                  <span class="red">Classlar</span> ham object yaratilishda
+                  ishlatiladi va unda ham 1dan ortiq objectlar yaratish mumkin.
+                  Unda yaratilgan funktion(method)lar
+                  <span class="green">prototype</span> iga saqlanadi
+                </p>
+                <div class="header__text-img">
+                  <img src="../images/class5.png" alt="Class" />
+                </div>
+                <p>
+                  <span class="red">Classlar</span> ning
+                  <span class="red">Constructor Function</span> dan farqi
+                  <span class="red">Classlarda</span>
+                  <span class="green">inheritance </span> olinadi va bunda
+                  <span class="green">super</span> kalit so'zidan foydalaniladi
+                  va <span class="green">extends</span> qilinadi
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="lessons__card">
+            <span class="show__list" id="show__list8" onclick="show_lesson()">
+              Garbage Collection</span
+            >
+            <div class="lessons" id="lessons8">
+              <div class="lessons__text">
+                <p class="header__text-title2">Garbage Collector</p>
+                <p>
+                  <span class="red">Garbage collector</span>
+                  <span class="green">heap xotirani</span> manage qilib turadi
+                  va unreachable bo'lgan objectlarni tozalaydi. Object qachonki
+                  <span class="red">null</span>ga tenglashsa u unreachable
+                  bo'ladi
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="lessons__card">
+            <span class="show__list" id="show__list9" onclick="show_lesson()">
+              Symbol</span
+            >
+            <div class="lessons" id="lessons9">
+              <div class="lessons__text">
+                <p class="header__text-title">Symbol</p>
+                <div class="header__text-img">
+                  <img src="../images/symbol1.png" alt="symbol" />
+                </div>
+                <div class="header__text-img">
+                  <img src="../images/symbol2.png" alt="symbol" />
+                </div>
+                <div class="header__text-img">
+                  <img src="../images/symbol3.png" alt="symbol" />
+                </div>
+                <div class="header__text-img">
+                  <img src="../images/symbol4.png" alt="symbol" />
+                </div>
+                <p>
+                  <span class="red">Symbol</span> unique qiymatga ega bo'ladi va
+                  2ta bir xil symbol hech qachon teng bo'lmaydi va u loopda
+                  ko'rinmaydi
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="lessons__card">
+            <span class="show__list" id="show__list10" onclick="show_lesson()"
+              >Destructing Assignment</span
+            >
+            <div class="lessons" id="lessons10">
+              <div class="lessons__text">
+                <p class="header__text-title">Destructing Assignment</p>
+                <div class="header__text-img">
+                  <img src="../images/ds1.png" alt="ds" />
+                </div>
+                <div class="header__text-img">
+                  <img src="../images/ds2.png" alt="ds" />
+                </div>
+                <div class="header__text-img">
+                  <img src="../images/ds3.png" alt="ds" />
+                </div>
+                <p>
+                  Bu<span class="red"> arrayni unpacking </span> qilish ya'ni
+                  ichidagi elementni alohida chiqarib olish uchun ishlatiladi va
+                  qolganini spread operation orqali array[] qilib chiqarish
+                  mumkin
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="lessons__card">
+            <span class="show__list" id="show__list11" onclick="show_lesson()"
+              >JS modules</span
+            >
+            <div class="lessons" id="lessons11">
+              <div class="lessons__text">
+                <p class="header__text-title">
+                  JS Module bu JS codelarni bo'limlarga bo'lib ishlatish
+                </p>
+                <p class="header__text-title3">
+                  Oddiy JS scriptda Module JS scriptlarining qanday farqi bor?
+                </p>
+                <p>1. Module files automatik tarzda use strict ishlatadi</p>
+                <p>2. Har bir module da alohida scope mavjud</p>
+                <p>
+                  3. type="module" bo'lgan fayllar avtomatik "defer" attributini
+                  ishlatadi
+                </p>
+                <p>4. this kalit so'zi undefinedga teng bo'ladi</p>
+                <div class="header__text-img">
+                  <img src="../images/jsmodule.png" alt="module" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="lessons__card">
+            <span class="show__list" id="show__list12" onclick="show_lesson()"
+              >Prototype</span
+            >
+            <div class="lessons" id="lessons12">
+              <div class="lessons__text">
+                <p class="header__text-title">getter va setter</p>
+                <div class="header__text-img">
+                  <img src="../images/setter.png" alt="" />
+                </div>
+                <p class="header__text-title">
+                  Bir marta qo'shilgan Prototypeni qayta ishlatish
+                </p>
+                <div class="header__text-img">
+                  <img src="../images/setter.png" alt="" />
+                </div>
+                <p class="header__text-title">
+                  Stringni Prototype iga number qo'shib ishlatish
+                </p>
+                <div class="header__text-img">
+                  <img src="../images/str+num.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="lessons__card">
+            <span class="show__list" id="show__list13" onclick="show_lesson()"
+              >Map</span
+            >
+            <div class="lessons" id="lessons13">
+              <div class="lessons__text">
+                <p class="header__text-title">
+                  Map key sifatida hamma data typeni qabul qiladi
+                </p>
+                <div class="header__text-img">
+                  <img src="../images/map.png" alt="map" />
+                </div>
+                <p>
+                  Unda <span class="red">Garbage collection</span> ishlamaydi.
+                </p>
+                <div class="header__text-img">
+                  <img src="../images/map2.png" alt="map2" />
+                </div>
+                <p class="header__text-title">Map metodlari</p>
+                <ul class="map__methods" style="text-align: left">
+                  <li>
+                    <span class="map__method">new Map()</span> – map yaratadi.
+                  </li>
+                  <li>
+                    <span class="map__method">map.set(key, value)</span> – mapga
+                    key va value qo'shadi.
+                  </li>
+                  <li>
+                    <span class="map__method">map.get(key)</span> – key orqali
+                    valueni chiqaradi agar mavjud bo'lmagan key kiritilsa
+                    undefined qaytaradi
+                  </li>
+                  <li>
+                    <span class="map__method">map.has(key)</span> – berilgan key
+                    map ichida bor yo'qligiga qarab true va false qaytaradi
+                  </li>
+                  <li>
+                    <span class="map__method">map.delete(key)</span> – key
+                    kritilsa map ichidagi property ni o'chirib yuboradi
+                  </li>
+                  <li>
+                    <span class="map__method">map.clear()</span> - mapni
+                    tozalaydi
+                  </li>
+                  <li>
+                    <span class="map__method">map.size</span> - mapni lengthini
+                    chiqarib beradi
+                  </li>
                 </ul>
-                <div class="nav__logo">
-                    <img src="../images/logo.png" alt=""  >
+              </div>
+            </div>
+          </div>
+          <div class="lessons__card">
+            <span class="show__list" id="show__list14" onclick="show_lesson()"
+              >WeakMap</span
+            >
+            <div class="lessons" id="lessons14">
+              <div class="lessons__text">
+                <p class="header__text-title2">WeakMap</p>
+                <p>
+                  Uning keyi har doim object bo'lishi shart va unda
+                  <span class="red">garbage collection</span> ishlaydi
+                </p>
+                <div class="header__text-img">
+                  <img src="../images/weakmap.png" alt="" />
                 </div>
-                 
-            </div>
-        </nav>
-        <aside class="left_bar" id="left__bar">
-            <div class="back__left" id="back__left" onclick="left()">
-                <div class="corner"></div>
-            </div>
-            <div class="moon" onclick="darkmode()"><i class="fa-solid fa-moon"></i></div>
-            <div class="left__top">
-                <div class="moon" onclick="darkmode()"><i class="fa-solid fa-moon"></i></div>
-                <div class="left__img">
-                    <img src="../images/nav__logo.webp" alt="">
-                </div>
-                <h1 class="left__username">Sadriddin Ravshanov</h1>
-            </div>
-            <div class="left__body">
-                <ul class="left__list">
-                    <a class="contacts" href="/"> <i class="fa-solid fa-house"></i> home</a>
-                    <a href="./contacts.html" class="contacts"><i class="fa-solid fa-user"></i> contacts</a>
-                    <a href="./lessons.html" class="contacts"><i class="fa-solid fa-book-open"></i> Lessons</a>
-                    <a class="contacts" href="./settings.html"><i class="fa-solid fa-gear"></i> Settings</a>
+                <p class="header__text-title">WeakMap metodlari</p>
+                <ul class="map__methods">
+                  <li>
+                    <span class="map__method">weakMap.set(key, value)</span> -
+                    unga key va value qo'shadi
+                  </li>
+                  <li>
+                    <span class="map__method">weakMap.get(key)</span> - value ni
+                    oladi
+                  </li>
+                  <li>
+                    <span class="map__method">weakMap.delete(key)</span> -
+                    weakMapni tozalaydi
+                  </li>
+                  <li>
+                    <span class="map__method">weakMap.has(key) </span>- keyning
+                    bor yo'qligiga qarab true || false qaytaradi
+                  </li>
                 </ul>
+              </div>
             </div>
-        </aside>
-        <header class="header  " onclick="remove()">
-            <div class="themes">
-                <div class="lessons__card">
-                    <span class="show__list" id="show__list"onclick="show_lesson()">Execution Context</span>
-                    <div class="lessons" id="lessons">
-                        <div class="lessons__text">
-                            <p class="header__text-title">Execution context 2 ga bo'linadi:</p>
-                            <p class="header__text-title2">1. Global Execution Context</p>
-                            <p class="header__text-title">Global Execution Context 2ga bo'linadi:</p>
-                            <p class="header__text-title3">1. Creation Phase</p>
-                            <p>Bu bosqichda hoisting hodissai sodir bo'ladi va brauzer conelarni bir marta to'liq o'qib
-                                chiqadi
-                                va variable nomini o'rganib chiqadi</p>
-                            <p class="header__text-title3">2. Execution Phase</p>
-                            <p>Bu bosqichda o'zgaruvchilar qiymatini o'zlashtirib chiqadi</p>
-                            <p class="header__text-title2">2. Function Execution Context</p>
-                            <p>Bu bosqichda ham xuddi shu hodisalar bo'lib o'tadi faqat barchasi function scope {}
-                                ichida
-                                ro'y
-                                beradi</p>
-                        </div>
-                    </div>
+          </div>
+          <div class="lessons__card">
+            <span class="show__list" id="show__list15" onclick="show_lesson()"
+              >Set</span
+            >
+            <div class="lessons" id="lessons15">
+              <div class="lessons__text">
+                <p>
+                  <span class="green">Set</span> unique qiymat olish uchun
+                  ishlatiladi va faqat valuelardan iborat bo'ladi unda ham
+                  <span class="yellow">garbage collection</span> ishlamaydi
+                  chunki unda key yo'q
+                </p>
+                <div class="header__text-img">
+                  <img src="../images/set.png" alt="weakMap" />
                 </div>
-                <div class="lessons__card">
-                    <span class="show__list" id="show__list2"onclick="show_lesson()"> Lexical Environment</span>
-                    <div class="lessons" id="lessons2">
-                        <div class="lessons__text">
-                            <p class="header__text-title">Lexical environment</p>
-                            <p>Har bir scope {} ichidage muhit lexical environment deyiladi</p>
-                            <p class="header__text-title2">Scope{}lar 3ga bo'linadi:</p>
-                            <p class="header__text-title3">1. Global scope{}</p>
-                            <p>Bu butun bir JS fayl degani</p>
-                            <p class="header__text-title3">2. Function scope{}</p>
-                            <p>Function ichida yozilgan codelar function scope ichida yozilgan bo'ladi</p>
-                            <p class="header__text-title3">3. Block scope{}</p>
-                            <p>Bu shunchaki scope ochib ishlatish {
-                                let name = 'Sadriddin'
-                                }</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="lessons__card">
-                    <span class="show__list" id="show__list3"onclick="show_lesson()"> Scope Chain</span>
-                    <div class="lessons" id="lessons3">
-                        <div class="lessons__text">
-                            <div class="header__text-img">
-                                <img src="../images/scope-chain.png" alt="">
-                            </div>
-                            <p class="header__text-title2">Scope Chain bu tashqaridan ichkariga kirish</p>
-                            <p>Agar "name"ni funksiya ichiga chaqirsak ishlaydi lekin funksiya ichidagi "age"ni
-                                tashqariga
-                                chaqirsak Reference Error beradi</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="lessons__card">
-                    <span class="show__list" id="show__list4"onclick="show_lesson()"> Closure (zamikanya)</span>
-                    <div class="lessons" id="lessons4">
-                        <div class="lessons__text">
-                            <div class="header__text-img">
-                                <img src="../images/closure.png" alt="closure">
-                            </div>
-                            <div class="header__text-img">
-                                <img src="../images/clo.png" alt="closure">
-                            </div>
-                            <p class="header__text-title2">Ota functionning argumentiga berilgan qiymatni ichkaridagi
-                                functionga chaqirib ishlatish <span class="red">closure</span> deb ataladi</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="lessons__card">
-
-                    <span class="show__list" id="show__list5"onclick="show_lesson()"> this</span>
-                    <div class="lessons" id="lessons5">
-                        <div class="lessons__text">
-                            <div class="header__text-img">
-                                <img src="../images/this.png" alt="tthis">
-                            </div>
-                            <p class="header__text-title"><span class="yellow">this</span>
-                                global contextga objectga ya'ni window objectiga bo'lgan yo'nalishni ko'rsatadi.
-                                Uning yo'nalishi joylashuviga qarab o'zgaradi.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="lessons__card">
-
-                    <span class="show__list" id="show__list6"onclick="show_lesson()"> call, bind, apply</span>
-                    <div class="lessons" id="lessons6">
-                        <div class="lessons__text">
-                            <p class="header__text-title">call</p>
-                            <div class="header__text-img">
-                                <img src="../images/call.png" alt="">
-                            </div>
-                            <p>object <span class="red">call </span> qilinganda this ning yo'nalishi 2-objectga
-                                o'zgaradi va
-                                2-objectning valuesini chiqaradi</p>
-                            <div class="header__text-img">
-                                <img src="../images/bind.png" alt="">
-                            </div>
-                            <p>object <span class="red">bind </span> qilinganda this ning yo'nalishi 2-objectga
-                                o'zgaradi va
-                                2-objectning valuesini chiqaradi, uning <span class="red">call</span> dan farqi uni
-                                funksiya
-                                qilib chaqirish kerak</p>
-                            <div class="header__text-img">
-                                <img src="../images/apply.png" alt="">
-                            </div>
-                            <p>object <span class="red">apply</span> qilinganda this ning yo'nalishi 2-objectga
-                                o'zgaradi va
-                                2-objectning valuesini chiqaradi, uning boshqalaridan farqi funksiya argumentini <span
-                                    class="red">array[]</span> ga olib berish kerak</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="lessons__card">
-
-                    <span class="show__list" id="show__list7"onclick="show_lesson()"> Constructor Function va Classlar</span>
-                    <div class="lessons" id="lessons7">
-                        <div class="lessons__text">
-                            <p class="header__text-title2">Constructor Function</p>
-                            <div class="header__text-img">
-                                <img src="../images/constructor1.png" alt="Constructor Function">
-                            </div>
-                            <p><span class="red">Constructor Function</span> object yaratilishda ishlatiladi va unda
-                                1dan
-                                ortiq objectlar yaratish mumkin. Unda yaratilgan funksiya(methodlar)lar unga <span
-                                    class="  yellow">property</span> sifatida qo'shiladi</p>
-                            <p class="header__text-title2">Class</p>
-                            <div class="header__text-img">
-                                <img src="../images/class1.png" alt="Class">
-                            </div>
-                            <div class="header__text-img">
-                                <img src="../images/class2.png" alt="Class">
-                            </div>
-                            <div class="header__text-img">
-                                <img src="../images/class3.png" alt="Class">
-                            </div>
-                            <div class="header__text-img">
-                                <img src="../images/class4.png" alt="Class">
-                            </div>
-                            <p><span class="red">Classlar</span> ham object yaratilishda ishlatiladi va unda ham 1dan
-                                ortiq
-                                objectlar yaratish mumkin. Unda yaratilgan funktion(method)lar <span
-                                    class="green">prototype</span> iga saqlanadi</p>
-                            <div class="header__text-img">
-                                <img src="../images/class5.png" alt="Class">
-                            </div>
-                            <p><span class="red">Classlar</span> ning <span class="red">Constructor Function</span> dan
-                                farqi <span class="red">Classlarda</span> <span class="green">inheritance </span>
-                                olinadi va
-                                bunda <span class="green">super</span> kalit so'zidan foydalaniladi va <span
-                                    class="green">extends</span> qilinadi</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="lessons__card">
-
-                    <span class="show__list" id="show__list8"onclick="show_lesson()"> Garbage Collection</span>
-                    <div class="lessons" id="lessons8">
-                        <div class="lessons__text">
-                            <p class="header__text-title2">Garbage Collector</p>
-                            <p><span class="red">Garbage collector</span> <span class="green">heap xotirani</span>
-                                manage
-                                qilib turadi va unreachable bo'lgan objectlarni tozalaydi. Object qachonki <span
-                                    class="red">null</span>ga tenglashsa u unreachable bo'ladi</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="lessons__card">
-
-                    <span class="show__list" id="show__list9"onclick="show_lesson()"> Symbol</span>
-                    <div class="lessons" id="lessons9">
-                        <div class="lessons__text">
-                            <p class="header__text-title">Symbol</p>
-                            <div class="header__text-img">
-                                <img src="../images/symbol1.png" alt="symbol">
-                            </div>
-                            <div class="header__text-img">
-                                <img src="../images/symbol2.png" alt="symbol">
-                            </div>
-                            <div class="header__text-img">
-                                <img src="../images/symbol3.png" alt="symbol">
-                            </div>
-                            <div class="header__text-img">
-                                <img src="../images/symbol4.png" alt="symbol">
-                            </div>
-                            <p><span class="red">Symbol</span> unique qiymatga ega bo'ladi va 2ta bir xil symbol hech
-                                qachon
-                                teng bo'lmaydi va u loopda ko'rinmaydi</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="lessons__card">
-
-                    <span class="show__list" id="show__list10" onclick="show_lesson()">Destructing Assignment</span>
-                    <div class="lessons" id="lessons10">
-                        <div class="lessons__text">
-                            <p class="header__text-title">Destructing Assignment</p>
-                            <div class="header__text-img">
-                                <img src="../images/ds1.png" alt="ds">
-                            </div>
-                            <div class="header__text-img">
-                                <img src="../images/ds2.png" alt="ds">
-                            </div>
-                            <div class="header__text-img">
-                                <img src="../images/ds3.png" alt="ds">
-                            </div>
-                            <p>Bu<span class="red"> arrayni unpacking </span> qilish ya'ni ichidagi elementni alohida
-                                chiqarib olish uchun ishlatiladi va qolganini spread operation orqali array[] qilib
-                                chiqarish mumkin </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="lessons__card">
-
-                    <span class="show__list" id="show__list11" onclick="show_lesson()">JS modules</span>
-                    <div class="lessons" id="lessons11">
-                        <div class="lessons__text">
-                            <p class="header__text-title">JS Module bu JS codelarni bo'limlarga bo'lib ishlatish</p>
-                            <p class="header__text-title3">Oddiy JS scriptda Module JS scriptlarining qanday farqi bor?
-                            </p>
-                            <p>1. Module files automatik tarzda use strict ishlatadi</p>
-                            <p>2. Har bir module da alohida scope mavjud</p>
-                            <p>3. type="module" bo'lgan fayllar avtomatik "defer" attributini ishlatadi</p>
-                            <p>4. this kalit so'zi undefinedga teng bo'ladi</p>
-                            <div class="header__text-img">
-                                <img src="../images/jsmodule.png" alt="module">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="lessons__card">
-
-                    <span class="show__list" id="show__list12" onclick="show_lesson()">Prototype</span>
-                    <div class="lessons" id="lessons12">
-                        <div class="lessons__text">
-                            <p class="header__text-title">getter va setter</p>
-                            <div class="header__text-img">
-                                <img src="../images/setter.png" alt="">
-                            </div>
-                            <p class="header__text-title">Bir marta qo'shilgan Prototypeni qayta ishlatish</p>
-                            <div class="header__text-img">
-                                <img src="../images/setter.png" alt="">
-                            </div>
-                            <p class="header__text-title">Stringni Prototype iga number qo'shib ishlatish</p>
-                            <div class="header__text-img">
-                                <img src="../images/str+num.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="lessons__card">
-
-                    <span class="show__list" id="show__list13" onclick="show_lesson()">Map</span>
-                    <div class="lessons" id="lessons13">
-                        <div class="lessons__text">
-                            <p class="header__text-title">Map key sifatida hamma data typeni qabul qiladi</p>
-                            <div class="header__text-img">
-                                <img src="../images/map.png" alt="map">
-                            </div>
-                            <p>Unda <span class="red">Garbage collection</span> ishlamaydi.</p>
-                            <div class="header__text-img">
-                                <img src="../images/map2.png" alt="map2">
-                            </div>
-                            <p class="header__text-title">Map metodlari</p>
-                            <ul class="map__methods" style="text-align: left;">
-                                <li><span class="map__method">new Map()</span> – map yaratadi.</li>
-                                <li><span class="map__method">map.set(key, value)</span> – mapga key va value qo'shadi.
-                                </li>
-                                <li><span class="map__method">map.get(key)</span> – key orqali valueni chiqaradi agar
-                                    mavjud
-                                    bo'lmagan key kiritilsa undefined qaytaradi</li>
-                                <li><span class="map__method">map.has(key)</span> – berilgan key map ichida bor
-                                    yo'qligiga
-                                    qarab
-                                    true va false qaytaradi</li>
-                                <li><span class="map__method">map.delete(key)</span> – key kritilsa map ichidagi
-                                    property ni
-                                    o'chirib yuboradi</li>
-                                <li><span class="map__method">map.clear()</span> - mapni tozalaydi</li>
-                                <li><span class="map__method">map.size</span> - mapni lengthini chiqarib beradi</li>
-                            </ul>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="lessons__card">
-
-                    <span class="show__list" id="show__list14" onclick="show_lesson()">WeakMap</span>
-                    <div class="lessons" id="lessons14">
-                        <div class="lessons__text">
-                            <p class="header__text-title2">WeakMap</p>
-                            <p>Uning keyi har doim object bo'lishi shart va unda <span class="red">garbage
-                                    collection</span>
-                                ishlaydi</p>
-                            <div class="header__text-img">
-                                <img src="../images/weakmap.png" alt="">
-                            </div>
-                            <p class="header__text-title">WeakMap metodlari</p>
-                            <ul class="map__methods">
-                                <li><span class="map__method">weakMap.set(key, value)</span> - unga key va value
-                                    qo'shadi
-                                </li>
-                                <li><span class="map__method">weakMap.get(key)</span> - value ni oladi</li>
-                                <li><span class="map__method">weakMap.delete(key)</span> - weakMapni tozalaydi</li>
-                                <li><span class="map__method">weakMap.has(key) </span>- keyning bor yo'qligiga qarab
-                                    true ||
-                                    false qaytaradi</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="lessons__card">
-
-                    <span class="show__list" id="show__list15" onclick="show_lesson()">Set</span>
-                    <div class="lessons" id="lessons15">
-                        <div class="lessons__text">
-                            <p><span class="green">Set</span> unique qiymat olish uchun ishlatiladi va faqat valuelardan
-                                iborat bo'ladi unda ham <span class="yellow">garbage collection</span> ishlamaydi chunki
-                                unda key yo'q</p>
-                            <div class="header__text-img">
-                                <img src="../images/set.png" alt="weakMap">
-                            </div>
-                            <ul class="map__methods">
-                                <li><span class="map__method">new Set([iterable])</span> - set yaratish</li>
-                                <li><span class="map__method">set.add(value)</span> - value qo'shadi</li>
-                                <li><span class="map__method">set.delete(value)</span> - valueni olib tashlaydi va agar
-                                    o'sha paytda value kiritilsa true aks holda false qaytaradi</li>
-                                <li><span class="map__method">set.has(value)</span> - value ning bor yoki yo'qligiga
-                                    qarab
-                                    true||false qaytaradi</li>
-                                <li><span class="map__method">set.clear()</span> - setni tozalaydi</li>
-                                <li><span class="map__method">set.size</span> - setning lengthini aniqlab beradi</li>
-
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="lessons__card">
-
-                    <span class="show__list" id="show__list16" onclick="show_lesson()">WeakSet</span>
-                    <div class="lessons" id="lessons16">
-                        <div class="lessons__text">
-                            <p class="header__text-title">WeakSet xuddi setga o'xshaydi faqat unga value uchun object
-                                beriladi</p>
-                            <div class="header__text-img">
-                                <img src="../images/weakset.png" alt="weakset">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="lessons__card">
-
-                    <span class="show__list" id="show__list17" onclick="show_lesson()">Property Flags</span>
-                    <div class="lessons" id="lessons17">
-                        <div class="lessons__text">
-                            <p class="header__text-title">Property Flags 3 ga bo'linadi</p>
-                            <p class="header__text-title2">1. writable</p>
-                            <p>Objectni qaysidir propertysini writable i true bo'lsa o'zgartirib(overwrite) bo'ladi
-                                false
-                                bo'lsa o'zgartirib bo'lmaydi</p>
-                            <p class="header__text-title2">2. enumerable</p>
-                            <p>Objectni qaysidir propertysini enumerable ini true qilinsa bu property loopda ko'rinadi
-                                agar
-                                false qiladigan bo'lsak u loopda ko'rinmaydi</p>
-                            <p class="header__text-title2">3. configurable</p>
-                            <p>Objectni qaysidir propertysini configurable true bo'lsa delete qilib bo'ladi agar false
-                                qilinsa o'sha propertyni delete qilib bo'ladi</p>
-                            <p class="header__text-title">Agar bitta propertyni o'zgartirmoqchi bo'lsak <span
-                                    class="header__text-title3">Object.defineProperty(<span class="green">object
-                                        name</span>, <span class="yellow">'property key'</span>, {<span
-                                        class="red">property
-                                        flag:</span> <span class="yellow">true or false</span> })</span> dan
-                                foydalaniladi
-                            </p>
-                            <p class="header__text-title2">Agar ko'proq propertyni o'zgartirmoqchi bo'lsak <span
-                                    class="header__text-title3">Object.defineProperties( <span class="green">object
-                                        name,</span> {<br> <span class="yellow">"property key:"</span> { <span
-                                        class="red">property flag:</span> <span class="yellow">true or false</span> }
-                                    })</span></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="lessons__card">
-
-                    <span class="show__list" id="show__list18" onclick="show_lesson()">DOM</span>
-                    <div class="lessons" id="lessons18">
-                        <div class="lessons__text">
-                            <p class="header__text-title">ID orqali elementni chaqirish</p>
-                            <div class="header__text-img">
-                                <img src="../images/id.png" alt="">
-                            </div>
-                            <p class="header__text-title">Class qo'shish</p>
-                            <div class="header__text-img">
-                                <img src="../images/addclass.png" alt="">
-                            </div>
-                            <p class="header__text-title">Class olib tashlash</p>
-                            <div class="header__text-img">
-                                <img src="../images/removeclass.png" alt="">
-                            </div>
-                            <p class="header__text-title">Event qo'shish</p>
-                            <div class="header__text-img">
-                                <img src="../images/add event.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="lessons__card">
-
-                    <span class="show__list" id="show__list19" onclick="show_lesson()">Functional Programming</span>
-                    <div class="lessons" id="lessons19">
-                        <p class="lessons__text"><span class="green">Functional Programming declarative programming
-                                paradigm</span>lar sinfiga mansub bo'lib, dasturni <span class="green">pure
-                                functionlar</span> orqali ishlatishni ilgari suradi. BU orqali kod tushunarli,
-                            boshqarishga oson, qayta ishlatsa bo'ladigan va testlashga oson bo'ladi. Functional
-                            programmingda quyidagi conceptsiyalar mavjud: <span class="green">Immutability, Pure
-                                Function, Higher ordered functions, first-class function, Currying, Recursion,
-                                Composition</span></p>
-                    </div>
-                </div>
-                <div class="lessons__card">
-
-                    <span class="show__list" id="show__list20" onclick="show_lesson()">Immutability</span>
-                    <div class="lessons" id="lessons20">
-                        <p class="lessons__text">
-                            <span class="green">Immutability</span> - bu dasturdagi data (object, array ...) larni
-                            aslini o'zgartirmasdan ular bila ishlash. Bunda arraylar bilan ishlaganda mutable
-                            methodlardan iloji boricha qochiladi. Masalan: sort(), reverse() lar o'rniga map(),
-                            filter(), reduce() kabi methodlar ishlatiladi
-                        </p>
-                    </div>
-                </div>
-                <div class="lessons__card">
-
-                    <span class="show__list" id="show__list21" onclick="show_lesson()">Pure function</span>
-                    <div class="lessons" id="lessons21">
-                        <div class="lessons__text" style="align-items: flex-start;">
-                            <p class="header__text-title2">Pure Function tashqi tomondagi variablega bog'liq bo'lmaydi
-                                va argumentga bog'liq bo'lib qiymat qaytaradi va side effect yo'q</p>
-                            <p>let a = 5</p>
-                            <p>let a = 7</p>
-                            <p>function pureFn (a, b) {</p>
-                            <p>return a + b</p>
-                            <p>}</p>
-                            <p>pureFn(a, b)</p>
-
-                            <p>function pureFn (a, b) {</p>
-                            <p>return a + b</p>
-                            <p>}</p>
-                            <p>pureFn(4, 8)</p>
-                            <p class="header__text-title"><span class="red">Side effect</span> - tashqi tomondan
-                                qanaqadir variable ni o'ziga qabul qilish</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="lessons__card">
-
-                    <span class="show__list" id="show__list22" onclick="show_lesson()">Impure Function</span>
-                    <div class="lessons" id="lessons22">
-                        <div class="lessons__text" style="align-items: flex-start;">
-                            <p class="header__text-title"><span class=" red">Impure Function</span> tashqi tomondagi
-                                variable ga bog'liq bo'ladi va unda side effect bor</p>
-                            <p>let a = 5</p>
-                            <p>let a = 7</p>
-                            <p>function pureFn (a, b) {</p>
-                            <p>return a + b</p>
-                            <p>}</p>
-                            <p>pureFn(a, b)</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="lessons__card">
-
-                    <span class="show__list" id="show__list23" onclick="show_lesson()">First-class function</span>
-                    <div class="lessons" id="lessons23">
-                        <div class="lessons__text " style="align-items: flex-start;">
-                            <p><span class="green">First-class function</span> - variable ga bersa bo'ladigan - function
-                                expression, argument sifatida bersa bo'ladigan - callback function, boshqa functiondan
-                                return qilsa bo'ladigan va <span class="red">property</span> bersa saqlay oladigan
-                                functionlar. (Function - bu object va objectlarday ishlay olishi) Ya'ni JS da hamma
-                                functionlar first-class functionga kiradi.</p>
-                            <p>function fn1 (){</p>
-                            <p>}</p>
-                            <p>console.log(fn1.name = "Sadriddin")</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="lessons__card">
-
-                    <span class="show__list" id="show__list24" onclick="show_lesson()">Higher-ordered Function</span>
-                    <div class="lessons" id="lessons24">
-                        <div class="lessons__text">
-                            <p><span class="green">Higher-ordered Function</span> - argument sifatida function oladigan
-                                yoki function qaytaradigan functionlar. Bularga misol: Array.prototype.map,
-                                Array.prototype.reduce, Array.prototype.find </p>
-                            <p><span class="red">filter(), forEach() va callback functionlar</span> va boshqalar ham
-                                kiradi</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="lessons__card">
-
-                    <span class="show__list" id="show__list25" onclick="show_lesson()">Currying</span>
-                    <div class="lessons" id="lessons25">
-                        <div class="lessons__text" style="align-items: flex-start;">
-                            <p><span class="green">Currying</span> - functionlarni bir necha qismlarga bo'lib alohida
-                                chaqirish usuli</p>
-                            <p>const curriedFn =(a)=> {</p>
-                            <p>return (b)=> {</p>
-                            <p>return (c)=> {</p>
-                            <p>console.log(a + b + c)</p>
-                            <p>}</p>
-                            <p>}</p>
-                            <p>}</p>
-                            <p>curriedFn(1)(2)(3)</p>
-                            <p class="header__text-title3">Bu yerda <span class="red">closure </span>ham sodir bo'lmoqda
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="lessons__card">
-
-                    <span class="show__list" id="show__list26" onclick="show_lesson()">OOP va uning prinsiplari</span>
-                    <div class="lessons" id="lessons26">
-                        <div class="lessons__text" style="align-items: flex-start;">
-                            <p class="header__text-title2"><span class="yellow">OOP</span> - bu dasturdagi kodlarni
-                                vazifasiga qarab, objectlar orqali turli qismlarga ajratib, kodlarni takrorlanishini
-                                oldini olib, qayta ishlatish imkonini beradigan - <span class="green">PROGRAMMING
-                                    PARADIGM</span> Uning 4ta asosiy prinsiplari mavjud:</p>
-                            <p>1. <span class="green">Inheritance</span> - bir Class ikkinchi Classga meros qoldirish
-                                yoki Classdan ikkinchi Classda foydalanish(<span class="red">extends, super</span>)</p>
-                            <p>2. <span class="green">Encapsulation</span> - Class tashqariga o'zidagi nimani ko'rsatish
-                                yoki ko'rsatmasligiga aytiladi. Ya'ni <span class="yellow">public, private,
-                                    protected</span> bo'lgan method yoki propertylar orqali qilinadi gan amallar <span
-                                    class="green">Encapsulation</span> qilishga kiradi (getter/setter) lar ham.</p>
-                            <p>3. <span class="green">Abstraction</span> - bu Class faqat ishlatilinadigan <span
-                                    class="green">method/property</span>larni tashqariga chiqaradi, keraksizlarni o'z
-                                ichiga qoldirish ya'ni yashirish</p>
-                            <p>4. <span class="green">Polimorphism</span> - methodlar sharoitga qarab har xil qiymat
-                                qaytarishi. Masalan <span class="red">satHello()</span> har bir userda har xil ishlaydi.
-                                Method qaterda ishlatilsa shu yerga qarab ishlaydi constructorga berilgan qiymatga
-                                bog'liq bo'ladi.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="lessons__card">
-
-                    <span class="show__list" id="show__list27" onclick="show_lesson()">Ma'lumot Almashish</span>
-                    <div class="lessons" id="lessons27">
-                        <div class="lessons__text">
-                            <div class="header__text-img">
-                                <img src="../images/http.png" alt="">
-                            </div>
-                            <div class="header__text-img">
-                                <img src="../images/httprequest.png" alt="">
-                            </div>
-                            <div class="header__text-img">
-                                <img src="../images/httpmodel.png" alt="">
-                            </div>
-                            <div class="header__text-img">
-                                <img src="../images/main.js.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="lessons__card">
-
-                    <span class="show__list" id="show__list28" onclick="show_lesson()"></span>
-                    <div class="lessons" id="lessons28"></div>
-                </div>
-                <div class="lessons__card">
-
-                    <span class="show__list" id="show__list29" onclick="show_lesson()"></span>
-                    <div class="lessons" id="lessons29"></div>
-                </div>
-                <div class="lessons__card">
-
-                    <span class="show__list" id="show__list30" onclick="show_lesson()"></span>
-                    <div class="lessons" id="lessons30"></div>
-                </div>
+                <ul class="map__methods">
+                  <li>
+                    <span class="map__method">new Set([iterable])</span> - set
+                    yaratish
+                  </li>
+                  <li>
+                    <span class="map__method">set.add(value)</span> - value
+                    qo'shadi
+                  </li>
+                  <li>
+                    <span class="map__method">set.delete(value)</span> - valueni
+                    olib tashlaydi va agar o'sha paytda value kiritilsa true aks
+                    holda false qaytaradi
+                  </li>
+                  <li>
+                    <span class="map__method">set.has(value)</span> - value ning
+                    bor yoki yo'qligiga qarab true||false qaytaradi
+                  </li>
+                  <li>
+                    <span class="map__method">set.clear()</span> - setni
+                    tozalaydi
+                  </li>
+                  <li>
+                    <span class="map__method">set.size</span> - setning
+                    lengthini aniqlab beradi
+                  </li>
+                </ul>
+              </div>
             </div>
+          </div>
+          <div class="lessons__card">
+            <span class="show__list" id="show__list16" onclick="show_lesson()"
+              >WeakSet</span
+            >
+            <div class="lessons" id="lessons16">
+              <div class="lessons__text">
+                <p class="header__text-title">
+                  WeakSet xuddi setga o'xshaydi faqat unga value uchun object
+                  beriladi
+                </p>
+                <div class="header__text-img">
+                  <img src="../images/weakset.png" alt="weakset" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="lessons__card">
+            <span class="show__list" id="show__list17" onclick="show_lesson()"
+              >Property Flags</span
+            >
+            <div class="lessons" id="lessons17">
+              <div class="lessons__text">
+                <p class="header__text-title">Property Flags 3 ga bo'linadi</p>
+                <p class="header__text-title2">1. writable</p>
+                <p>
+                  Objectni qaysidir propertysini writable i true bo'lsa
+                  o'zgartirib(overwrite) bo'ladi false bo'lsa o'zgartirib
+                  bo'lmaydi
+                </p>
+                <p class="header__text-title2">2. enumerable</p>
+                <p>
+                  Objectni qaysidir propertysini enumerable ini true qilinsa bu
+                  property loopda ko'rinadi agar false qiladigan bo'lsak u
+                  loopda ko'rinmaydi
+                </p>
+                <p class="header__text-title2">3. configurable</p>
+                <p>
+                  Objectni qaysidir propertysini configurable true bo'lsa delete
+                  qilib bo'ladi agar false qilinsa o'sha propertyni delete qilib
+                  bo'ladi
+                </p>
+                <p class="header__text-title">
+                  Agar bitta propertyni o'zgartirmoqchi bo'lsak
+                  <span class="header__text-title3"
+                    >Object.defineProperty(<span class="green">object name</span
+                    >, <span class="yellow">'property key'</span>, {<span
+                      class="red"
+                      >property flag:</span
+                    >
+                    <span class="yellow">true or false</span> })</span
+                  >
+                  dan foydalaniladi
+                </p>
+                <p class="header__text-title2">
+                  Agar ko'proq propertyni o'zgartirmoqchi bo'lsak
+                  <span class="header__text-title3"
+                    >Object.defineProperties(
+                    <span class="green">object name,</span> {<br />
+                    <span class="yellow">"property key:"</span> {
+                    <span class="red">property flag:</span>
+                    <span class="yellow">true or false</span> } })</span
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="lessons__card">
+            <span class="show__list" id="show__list18" onclick="show_lesson()"
+              >DOM</span
+            >
+            <div class="lessons" id="lessons18">
+              <div class="lessons__text">
+                <p class="header__text-title">ID orqali elementni chaqirish</p>
+                <div class="header__text-img">
+                  <img src="../images/id.png" alt="" />
+                </div>
+                <p class="header__text-title">Class qo'shish</p>
+                <div class="header__text-img">
+                  <img src="../images/addclass.png" alt="" />
+                </div>
+                <p class="header__text-title">Class olib tashlash</p>
+                <div class="header__text-img">
+                  <img src="../images/removeclass.png" alt="" />
+                </div>
+                <p class="header__text-title">Event qo'shish</p>
+                <div class="header__text-img">
+                  <img src="../images/add event.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="lessons__card">
+            <span class="show__list" id="show__list19" onclick="show_lesson()"
+              >Functional Programming</span
+            >
+            <div class="lessons" id="lessons19">
+              <p class="lessons__text">
+                <span class="green"
+                  >Functional Programming declarative programming paradigm</span
+                >lar sinfiga mansub bo'lib, dasturni
+                <span class="green">pure functionlar</span> orqali ishlatishni
+                ilgari suradi. BU orqali kod tushunarli, boshqarishga oson,
+                qayta ishlatsa bo'ladigan va testlashga oson bo'ladi. Functional
+                programmingda quyidagi conceptsiyalar mavjud:
+                <span class="green"
+                  >Immutability, Pure Function, Higher ordered functions,
+                  first-class function, Currying, Recursion, Composition</span
+                >
+              </p>
+            </div>
+          </div>
+          <div class="lessons__card">
+            <span class="show__list" id="show__list20" onclick="show_lesson()"
+              >Immutability</span
+            >
+            <div class="lessons" id="lessons20">
+              <p class="lessons__text">
+                <span class="green">Immutability</span> - bu dasturdagi data
+                (object, array ...) larni aslini o'zgartirmasdan ular bila
+                ishlash. Bunda arraylar bilan ishlaganda mutable methodlardan
+                iloji boricha qochiladi. Masalan: sort(), reverse() lar o'rniga
+                map(), filter(), reduce() kabi methodlar ishlatiladi
+              </p>
+            </div>
+          </div>
+          <div class="lessons__card">
+            <span class="show__list" id="show__list21" onclick="show_lesson()"
+              >Pure function</span
+            >
+            <div class="lessons" id="lessons21">
+              <div class="lessons__text" style="align-items: flex-start">
+                <p class="header__text-title2">
+                  Pure Function tashqi tomondagi variablega bog'liq bo'lmaydi va
+                  argumentga bog'liq bo'lib qiymat qaytaradi va side effect yo'q
+                </p>
+                <p>let a = 5</p>
+                <p>let a = 7</p>
+                <p>function pureFn (a, b) {</p>
+                <p>return a + b</p>
+                <p>}</p>
+                <p>pureFn(a, b)</p>
 
-        </header>
-        <footer class="footer">
-            <h1 style="margin-bottom: 20px;" class="footer__title">Contact Us</h1>
-            <ul class="footer__social">
-                <li><a href="https://t.me/farkhodo_vich"><i class="fa-brands fa-telegram" aria-hidden="true"></i></a></li>
-                <li><a href="https://instagram.com/farkhodo_vich"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a></li>
-                <li><a href="https://github.com/Sadriddin0124"><i class="fa-brands fa-github" aria-hidden="true"></i></a></li>
-                <li><a href="/"><i class="fa fa-home" aria-hidden="true"></i></a></li>
-                <li><a href="#"><i class="fa fa-repeat" aria-hidden="true"></i></a></li>
-              </ul>
-        </footer>
-        <script src="../main.js"></script>
-        <script src="../settings.js"></script>
+                <p>function pureFn (a, b) {</p>
+                <p>return a + b</p>
+                <p>}</p>
+                <p>pureFn(4, 8)</p>
+                <p class="header__text-title">
+                  <span class="red">Side effect</span> - tashqi tomondan
+                  qanaqadir variable ni o'ziga qabul qilish
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="lessons__card">
+            <span class="show__list" id="show__list22" onclick="show_lesson()"
+              >Impure Function</span
+            >
+            <div class="lessons" id="lessons22">
+              <div class="lessons__text" style="align-items: flex-start">
+                <p class="header__text-title">
+                  <span class="red">Impure Function</span> tashqi tomondagi
+                  variable ga bog'liq bo'ladi va unda side effect bor
+                </p>
+                <p>let a = 5</p>
+                <p>let a = 7</p>
+                <p>function pureFn (a, b) {</p>
+                <p>return a + b</p>
+                <p>}</p>
+                <p>pureFn(a, b)</p>
+              </div>
+            </div>
+          </div>
+          <div class="lessons__card">
+            <span class="show__list" id="show__list23" onclick="show_lesson()"
+              >First-class function</span
+            >
+            <div class="lessons" id="lessons23">
+              <div class="lessons__text" style="align-items: flex-start">
+                <p>
+                  <span class="green">First-class function</span> - variable ga
+                  bersa bo'ladigan - function expression, argument sifatida
+                  bersa bo'ladigan - callback function, boshqa functiondan
+                  return qilsa bo'ladigan va
+                  <span class="red">property</span> bersa saqlay oladigan
+                  functionlar. (Function - bu object va objectlarday ishlay
+                  olishi) Ya'ni JS da hamma functionlar first-class functionga
+                  kiradi.
+                </p>
+                <p>function fn1 (){</p>
+                <p>}</p>
+                <p>console.log(fn1.name = "Sadriddin")</p>
+              </div>
+            </div>
+          </div>
+          <div class="lessons__card">
+            <span class="show__list" id="show__list24" onclick="show_lesson()"
+              >Higher-ordered Function</span
+            >
+            <div class="lessons" id="lessons24">
+              <div class="lessons__text">
+                <p>
+                  <span class="green">Higher-ordered Function</span> - argument
+                  sifatida function oladigan yoki function qaytaradigan
+                  functionlar. Bularga misol: Array.prototype.map,
+                  Array.prototype.reduce, Array.prototype.find
+                </p>
+                <p>
+                  <span class="red"
+                    >filter(), forEach() va callback functionlar</span
+                  >
+                  va boshqalar ham kiradi
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="lessons__card">
+            <span class="show__list" id="show__list25" onclick="show_lesson()"
+              >Currying</span
+            >
+            <div class="lessons" id="lessons25">
+              <div class="lessons__text" style="align-items: flex-start">
+                <p>
+                  <span class="green">Currying</span> - functionlarni bir necha
+                  qismlarga bo'lib alohida chaqirish usuli
+                </p>
+                <p>const curriedFn =(a)=> {</p>
+                <p>return (b)=> {</p>
+                <p>return (c)=> {</p>
+                <p>console.log(a + b + c)</p>
+                <p>}</p>
+                <p>}</p>
+                <p>}</p>
+                <p>curriedFn(1)(2)(3)</p>
+                <p class="header__text-title3">
+                  Bu yerda <span class="red">closure </span>ham sodir bo'lmoqda
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="lessons__card">
+            <span class="show__list" id="show__list26" onclick="show_lesson()"
+              >OOP va uning prinsiplari</span
+            >
+            <div class="lessons" id="lessons26">
+              <div class="lessons__text" style="align-items: flex-start">
+                <p class="header__text-title2">
+                  <span class="yellow">OOP</span> - bu dasturdagi kodlarni
+                  vazifasiga qarab, objectlar orqali turli qismlarga ajratib,
+                  kodlarni takrorlanishini oldini olib, qayta ishlatish imkonini
+                  beradigan -
+                  <span class="green">PROGRAMMING PARADIGM</span> Uning 4ta
+                  asosiy prinsiplari mavjud:
+                </p>
+                <p>
+                  1. <span class="green">Inheritance</span> - bir Class ikkinchi
+                  Classga meros qoldirish yoki Classdan ikkinchi Classda
+                  foydalanish(<span class="red">extends, super</span>)
+                </p>
+                <p>
+                  2. <span class="green">Encapsulation</span> - Class tashqariga
+                  o'zidagi nimani ko'rsatish yoki ko'rsatmasligiga aytiladi.
+                  Ya'ni
+                  <span class="yellow">public, private, protected</span> bo'lgan
+                  method yoki propertylar orqali qilinadi gan amallar
+                  <span class="green">Encapsulation</span> qilishga kiradi
+                  (getter/setter) lar ham.
+                </p>
+                <p>
+                  3. <span class="green">Abstraction</span> - bu Class faqat
+                  ishlatilinadigan
+                  <span class="green">method/property</span>larni tashqariga
+                  chiqaradi, keraksizlarni o'z ichiga qoldirish ya'ni yashirish
+                </p>
+                <p>
+                  4. <span class="green">Polimorphism</span> - methodlar
+                  sharoitga qarab har xil qiymat qaytarishi. Masalan
+                  <span class="red">satHello()</span> har bir userda har xil
+                  ishlaydi. Method qaterda ishlatilsa shu yerga qarab ishlaydi
+                  constructorga berilgan qiymatga bog'liq bo'ladi.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="lessons__card">
+            <span class="show__list" id="show__list27" onclick="show_lesson()"
+              >Ma'lumot Almashish</span
+            >
+            <div class="lessons" id="lessons27">
+              <div class="lessons__text">
+                <div class="header__text-img">
+                  <img src="../images/http.png" alt="" />
+                </div>
+                <div class="header__text-img">
+                  <img src="../images/httprequest.png" alt="" />
+                </div>
+                <div class="header__text-img">
+                  <img src="../images/httpmodel.png" alt="" />
+                </div>
+                <div class="header__text-img">
+                  <img src="../images/main.js.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="lessons__card">
+            <span class="show__list" id="show__list28" onclick="show_lesson()"
+              >React JS</span
+            >
+            <div class="lessons" id="lessons28">
+              <div class="lessons__text">
+                <p class="header__text-title">Reactni o'rnatish</p>
+                <p>
+                  <a class="red" href="https://nodejs.org/en">https://nodejs.org/en</a> uni
+                  tekshirish uchun <span class="green">--version</span> npm bu
+                  <span class="yellow">NODE Package Management</span>
+                  <span class="green"> <br>
+                    C: or D:<br />
+                    cd "your folder" <br />
+                    create-react-app "folder name"
+                  </span> <br>
+                  <span class="yellow">
+                    <span class="green">npm start</span> - Reactni ishga tushiradi <br>
+                    <span class="green">npm run build</span> - fileni siqib beradi <br>
+                    <span class="green">npm test</span> - test qilish uchun <br>
+                    <span class="green">npm install</span> - node mudulesni kompyuter xotirasidan o'rnatib beradi
+                  </span>
+                </p>
+                <p class="header__text-title2">
+                  React JS bu library, Vue JS va Angular JS bu framework
+                </p>
+                <p>
+                  Birinchi bo'lib <span class="green">React</span> 2011-yilda
+                  chiqqan. React da 2 xil Component bor
+                  <span class="green"
+                    >Class Component va Functional Component</span
+                  >
+                  React va Vue<span class="yellow">Client Side Rendering</span
+                  >da ishlaydi. Reactning
+                  <span class="green">Next JS</span> kutubxonasi Server Side
+                  Renderingda ishlaydi. Vue JSning
+                  <span class="yellow">Max JS </span>degan kutib xonasi bor
+                </p>
+                <p>JSX bu <span class="green">Javascript ichida HTML, HTML ichida Javascript</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="lessons__card">
+            <span
+              class="show__list"
+              id="show__list29"
+              onclick="show_lesson()"
+            ></span>
+            <div class="lessons" id="lessons29"></div>
+          </div>
+          <div class="lessons__card">
+            <span
+              class="show__list"
+              id="show__list30"
+              onclick="show_lesson()"
+            ></span>
+            <div class="lessons" id="lessons30"></div>
+          </div>
+        </div>
+      </header>
+      <footer class="footer">
+        <h1 style="margin-bottom: 20px" class="footer__title">Contact Us</h1>
+        <ul class="footer__social">
+          <li>
+            <a href="https://t.me/farkhodo_vich"
+              ><i class="fa-brands fa-telegram" aria-hidden="true"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://instagram.com/farkhodo_vich"
+              ><i class="fa-brands fa-instagram" aria-hidden="true"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://github.com/Sadriddin0124"
+              ><i class="fa-brands fa-github" aria-hidden="true"></i
+            ></a>
+          </li>
+          <li>
+            <a href="/"><i class="fa fa-home" aria-hidden="true"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-repeat" aria-hidden="true"></i></a>
+          </li>
+        </ul>
+      </footer>
+      <script src="../main.js"></script>
+      <script src="../settings.js"></script>
     </div>
-</body>
-
+  </body>
 </html>
