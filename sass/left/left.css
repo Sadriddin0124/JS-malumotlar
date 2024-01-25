@@ -13,6 +13,7 @@
 }
 
 .left_bar {
+  transition: 0.5s all !important;
   position: fixed;
   left: -300px;
   width: 220px;
@@ -88,6 +89,7 @@
   right: 10px;
   color: #000000;
   cursor: pointer;
+  transition: 0.1s all;
 }
 
 .back__left:active {

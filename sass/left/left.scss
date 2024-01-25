@@ -14,12 +14,12 @@
 }
 
 .left_bar {
+    transition: .5s all !important;
     position: fixed;
     left: -300px;
     width: 220px;
     bottom: 0;
     height: 100%;
-    
     display: flex;
     justify-content: start;
     flex-direction: column;
@@ -93,6 +93,7 @@
     color: #000000;
     @extend %flex-center;
     cursor: pointer;
+    transition: .1s all;
 }
 
 .back__left:active {
